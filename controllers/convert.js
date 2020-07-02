@@ -2,8 +2,7 @@
 const converter = require("../workers/converter");
 
 //Create Controller to convert HTML to pdf that will be exported to /convert route
-
-exports.convert = async (req, res) => {
+const convert = async (req, res) => {
   try {
     const data = req.body;
     const pdf = await converter(data);
@@ -14,3 +13,5 @@ exports.convert = async (req, res) => {
     res.status(500).json({ success: false });
   }
 };
+
+module.exports = convert;

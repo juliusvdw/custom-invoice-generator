@@ -6,7 +6,10 @@ const app = express();
 //Init Middleware
 app.use(express.json());
 
-//Connect Routes
+//Bring in Routes
+const convert = require("./routes/convert");
+
+//Mount Routes
 app.use("/convert", convert);
 
 //Declare PORT var, fallback to PORT 5000 if environment port is not found
