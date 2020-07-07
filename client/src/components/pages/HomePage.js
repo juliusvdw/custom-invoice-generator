@@ -6,14 +6,7 @@ const HomePage = () => {
       <div className="container-fluid " style={{ height: "100vh" }}>
         <div className="row h-100">
           <div className="col-lg-8 col-md-8 text-left " id="main-left">
-            <div
-              className="container-fluid h-100"
-              style={{
-                paddingTop: "30%",
-                paddingRight: "20%",
-                paddingLeft: "7%",
-              }}
-            >
+            <div className="container-fluid h-100" style={containerStyle}>
               <h2
                 className=""
                 style={{
@@ -49,9 +42,9 @@ const HomePage = () => {
 };
 
 const imageStyle = {
-  height: "90%",
-  width: "100%",
-  paddingTop: "12%",
+  height: "100%",
+  width: "110%",
+  paddingTop: "3%",
   position: "relative",
   marginLeft: "-55%",
 };
@@ -62,7 +55,13 @@ const pStyle = {
 
 const btnStyle = {
   borderWidth: "1.5px",
-  height: "50px",
+  minHeight: "50px",
+};
+
+const containerStyle = {
+  paddingTop: "35vh",
+  paddingRight: "20%",
+  paddingLeft: "7%",
 };
 
 export default HomePage;

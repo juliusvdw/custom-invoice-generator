@@ -8,6 +8,10 @@
   background-position: center; /* Center the image */
 }
 
+.btn {
+  transition: 0.15s;
+}
 .btn:hover {
   cursor: pointer;
+  transform: scale(1.022);
 }
