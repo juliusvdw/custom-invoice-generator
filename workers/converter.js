@@ -5,8 +5,11 @@ const converter = async (data) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.setContent("<h1>Hello World</h1>");
-  await page.pdf({ path: "page.pdf" });
+  const pdf = await page.pdf();
+
+  console.log("PDF generated");
   await browser.close();
+  return pdf;
 };
 
 module.exports = converter;

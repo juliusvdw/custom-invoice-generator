@@ -7,7 +7,13 @@ const convert = async (req, res) => {
     const data = req.body;
     const pdf = await converter(data);
 
-    res.status(200).sendFile(pdf);
+    res.set({
+      "Content-Type": "application/pdf",
+      "Content-Length": pdf.length,
+    });
+
+    //Send PDF to client
+    res.status(200).send(pdf);
   } catch (err) {
     console.log(err);
     res.status(500).json({ success: false });
