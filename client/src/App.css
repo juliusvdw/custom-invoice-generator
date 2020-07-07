@@ -1,3 +1,9 @@
 .App {
   text-align: center;
 }
+
+#home {
+  background-image: url("/public/files.svg");
+
+  background-position: center; /* Center the image */
+}
