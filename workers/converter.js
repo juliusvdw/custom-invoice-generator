@@ -1,3 +1,5 @@
+const puppeteer = require("puppeteer");
+
 //Create logic that will take HTML(data) as input, and convert it into a PDF then return it
 const converter = async (data) => {
   const browser = await puppeteer.launch();
