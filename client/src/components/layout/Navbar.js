@@ -9,11 +9,13 @@ const Navbar = () => {
 
       <ul className="navbar-nav ml-auto d-none d-md-block" style={navListStyle}>
         <li className="nav-item active">
-          <a className="nav-link" href="#">
-            <btn className="btn btn-warning">
-              <strong>Create Invoice</strong>
-            </btn>
-          </a>
+          {window.location.pathname === "/" && (
+            <a className="nav-link" href="#">
+              <btn className="btn btn-warning">
+                <strong>Create Invoice</strong>
+              </btn>
+            </a>
+          )}
         </li>
       </ul>
     </nav>
