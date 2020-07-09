@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -10,11 +11,11 @@ const Navbar = () => {
       <ul className="navbar-nav ml-auto d-none d-md-block" style={navListStyle}>
         <li className="nav-item active">
           {window.location.pathname === "/" && (
-            <a className="nav-link" href="#">
+            <Link to="/pdf" className="nav-link" href="#">
               <btn className="btn btn-warning">
                 <strong>Create Invoice</strong>
               </btn>
-            </a>
+            </Link>
           )}
         </li>
       </ul>

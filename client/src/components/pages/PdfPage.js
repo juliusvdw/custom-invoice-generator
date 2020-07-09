@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import Navbar from "../layout/Navbar";
 
 const PdfPage = () => {
-  return <div></div>;
+  return (
+    <>
+      <Navbar />;
+    </>
+  );
 };
 
 export default PdfPage;
