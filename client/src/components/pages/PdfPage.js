@@ -5,7 +5,7 @@ import Navbar from "../layout/Navbar";
 const PdfPage = () => {
   return (
     <>
-      <Navbar />;
+      <Navbar />
     </>
   );
 };
