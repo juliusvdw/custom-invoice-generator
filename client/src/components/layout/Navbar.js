@@ -12,9 +12,9 @@ const Navbar = () => {
         <li className="nav-item active">
           {window.location.pathname === "/" && (
             <Link to="/pdf" className="nav-link" href="#">
-              <btn className="btn btn-warning">
+              <button className="btn btn-warning">
                 <strong>Create Invoice</strong>
-              </btn>
+              </button>
             </Link>
           )}
         </li>
