@@ -7,7 +7,7 @@ const Form = () => {
         <div className="col-lg-8 col-md-8 col-sm-8 text-left">
           <h6>From</h6>
           <textarea
-            className="form-control"
+            className="form-control "
             placeholder="Your Company/Name + Address"
             style={textAreaStyle}
           />
@@ -17,7 +17,7 @@ const Form = () => {
             className="jumbotron bg-warning mt-4 py-0 px-0"
             style={logoStyle}
           >
-            <h6 style={{ paddingTop: "28%" }}>Your Logo Here</h6>
+            <h6 style={{ paddingTop: "35px" }}>Your Logo Here</h6>
           </div>
         </div>
       </div>
@@ -42,17 +42,53 @@ const Form = () => {
           <input type="date" className="form-control" style={borderStyle} />
         </div>
       </div>
+
+      <hr style={{ marginTop: "35px" }} />
+
+      <div className="row">
+        <div className="col-lg-6 text-left">
+          <h6>Description</h6>
+          <textarea className="form-control mt-3" style={descriptionStyle} />
+        </div>
+        <div className="col-lg-2 text-left">
+          <h6>Amount</h6>
+          <input
+            type="number"
+            className="form-control mt-3 "
+            placeholder="0.0"
+          />
+        </div>
+        <div className="col-lg-3 text-left">
+          <h6>Tax</h6>
+          <button className="btn btn-warning  mt-2 form-control">
+            Add Tax
+          </button>
+        </div>
+        <div className="col-lg-1 my-auto text-left">
+          <h4 className="text-danger mt-3">X</h4>
+        </div>
+      </div>
+
+      <button className="btn btn-warning form-control mt-3">
+        Add New Item
+      </button>
     </div>
   );
 };
 
 const jumboStyle = {
-  height: "60vh",
+  minHeight: "60vh",
   marginTop: "5%",
+  backgroundColor: "#D2E7F4",
 };
 
 const textAreaStyle = {
   minHeight: "120px",
+  borderRadius: "7px",
+};
+
+const descriptionStyle = {
+  minHeight: "40px",
   borderRadius: "7px",
 };
 
@@ -63,7 +99,7 @@ const logoStyle = {
 };
 
 const borderStyle = {
-  borderRadius: "7p",
+  borderRadius: "7px",
 };
 
 export default Form;
