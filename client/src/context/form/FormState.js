@@ -5,7 +5,14 @@ import FormContext from "./formContext";
 import FormReducer from "./formReducer";
 
 const FormState = (props) => {
-  const initialState = {};
+  const initialState = {
+    from: "",
+    to: "",
+    invoiceNo: "",
+    invoiceDate: "",
+    terms: "",
+    items: [],
+  };
 
   const [state, dispatch] = useReducer(FormReducer, initialState);
 

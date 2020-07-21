@@ -110,6 +110,7 @@ const Form = () => {
         </form>
       </div>
       <button
+        type="submit"
         className="btn btn-warning form-control mt-3 mb-4"
         style={{ minHeight: "50px" }}
       >
