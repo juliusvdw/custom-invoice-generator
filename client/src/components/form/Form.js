@@ -7,18 +7,29 @@ const Form = () => {
   //Set up form state with useState
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
-  const [invoiceNo, setinvoiceNo] = useState("");
-  const [invoiceDate, setinvoiceDate] = useState("");
+  const [invoiceNo, setInvoiceNo] = useState("");
+  const [invoiceDate, setInvoiceDate] = useState("");
   const [items, setitems] = useState("");
-  const [terms, setFrom] = useState("");
+  const [terms, setTerms] = useState("");
 
   const formContext = useContext(FormContext);
 
-  const {} = formContext;
+  const { sendData } = formContext;
+
+  //Send form data to server for pdf generation
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    //Create formData object to be sent to server
+    const formData = { from, to, invoiceNo, invoiceDate, terms };
+    console.log(formData);
+    sendData(formData);
+  };
+
   return (
     <>
-      <div className="jumbotron " style={jumboStyle}>
-        <form>
+      <form onSubmit={onSubmit}>
+        <div className="jumbotron " style={jumboStyle}>
           <div className="row">
             <div className="col-lg-8 col-md-8 col-sm-8 text-left">
               <h6>From</h6>
@@ -27,6 +38,7 @@ const Form = () => {
                 placeholder="Your Company/Name + Address"
                 style={textAreaStyle}
                 value={from}
+                onChange={(e) => setFrom(e.target.value)}
               />
             </div>
             <div className="col-lg-3 col-md-3 col-sm-3 offset-lg-1">
@@ -46,6 +58,7 @@ const Form = () => {
                 placeholder="Your customer's billing address"
                 style={textAreaStyle}
                 value={to}
+                onChange={(e) => setTo(e.target.value)}
               />
             </div>
             <div className="col-lg-3 col-md-3 col-sm-3 offset-lg-1 text-left">
@@ -56,6 +69,7 @@ const Form = () => {
                 className="form-control"
                 style={borderStyle}
                 value={invoiceNo}
+                onChange={(e) => setInvoiceNo(e.target.value)}
               />
               <h6 className="pt-3">Invoice Date</h6>
               <input
@@ -63,6 +77,7 @@ const Form = () => {
                 className="form-control"
                 style={borderStyle}
                 value={invoiceDate}
+                onChange={(e) => setInvoiceDate(e.target.value)}
               />
             </div>
           </div>
@@ -127,18 +142,19 @@ const Form = () => {
                 placeholder="Any extra information to provide to customer"
                 style={textAreaStyle}
                 value={terms}
+                onChange={(e) => setTerms(e.target.value)}
               />
             </div>
           </div>
-        </form>
-      </div>
-      <button
-        type="submit"
-        className="btn btn-warning form-control mt-3 mb-4"
-        style={{ minHeight: "50px" }}
-      >
-        Download invoice PDF
-      </button>
+        </div>
+        <button
+          type="submit"
+          className="btn btn-warning form-control mt-3 mb-4"
+          style={{ minHeight: "50px" }}
+        >
+          Download invoice PDF
+        </button>
+      </form>
     </>
   );
 };

@@ -5,13 +5,26 @@ import FormReducer from "./formReducer";
 
 const FormState = (props) => {
   const initialState = {
-    formData: {},
+    success: null,
+    loading: false,
   };
 
   const [state, dispatch] = useReducer(FormReducer, initialState);
 
+  //Send formData to the server
+  const sendData = (formData) => {
+    try {
+    } catch (err) {}
+  };
+
   return (
-    <FormContext.Provider value={{}}>{props.children}</FormContext.Provider>
+    <FormContext.Provider
+      value={{
+        sendData,
+      }}
+    >
+      {props.children}
+    </FormContext.Provider>
   );
 };
 
