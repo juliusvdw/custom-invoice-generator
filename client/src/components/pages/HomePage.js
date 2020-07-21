@@ -66,7 +66,7 @@ const btnStyle = {
 };
 
 const containerStyle = {
-  paddingTop: "35vh",
+  paddingTop: "40vh",
   paddingRight: "20%",
   paddingLeft: "7%",
 };
