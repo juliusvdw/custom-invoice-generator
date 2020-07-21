@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+
+//Bring in context
+import FormContext from "../../context/form/formContext";
 
 const Form = () => {
+  //Set up form state with useState
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
+  const [invoiceNo, setinvoiceNo] = useState("");
+  const [invoiceDate, setinvoiceDate] = useState("");
+  const [items, setitems] = useState("");
+  const [terms, setFrom] = useState("");
+
+  const formContext = useContext(FormContext);
+
+  const {} = formContext;
   return (
     <>
       <div className="jumbotron " style={jumboStyle}>
@@ -12,6 +26,7 @@ const Form = () => {
                 className="form-control "
                 placeholder="Your Company/Name + Address"
                 style={textAreaStyle}
+                value={from}
               />
             </div>
             <div className="col-lg-3 col-md-3 col-sm-3 offset-lg-1">
@@ -30,6 +45,7 @@ const Form = () => {
                 className="form-control"
                 placeholder="Your customer's billing address"
                 style={textAreaStyle}
+                value={to}
               />
             </div>
             <div className="col-lg-3 col-md-3 col-sm-3 offset-lg-1 text-left">
@@ -39,9 +55,15 @@ const Form = () => {
                 placeholder="1"
                 className="form-control"
                 style={borderStyle}
+                value={invoiceNo}
               />
               <h6 className="pt-3">Invoice Date</h6>
-              <input type="date" className="form-control" style={borderStyle} />
+              <input
+                type="date"
+                className="form-control"
+                style={borderStyle}
+                value={invoiceDate}
+              />
             </div>
           </div>
 
@@ -104,6 +126,7 @@ const Form = () => {
                 className="form-control "
                 placeholder="Any extra information to provide to customer"
                 style={textAreaStyle}
+                value={terms}
               />
             </div>
           </div>

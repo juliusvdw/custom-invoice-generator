@@ -1,17 +1,11 @@
 import React, { useReducer } from "react";
-import axios from "axios";
 
 import FormContext from "./formContext";
 import FormReducer from "./formReducer";
 
 const FormState = (props) => {
   const initialState = {
-    from: "",
-    to: "",
-    invoiceNo: "",
-    invoiceDate: "",
-    terms: "",
-    items: [],
+    formData: {},
   };
 
   const [state, dispatch] = useReducer(FormReducer, initialState);
