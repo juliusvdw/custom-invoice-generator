@@ -38,9 +38,15 @@ const Form = () => {
         <div className="jumbotron " style={jumboStyle}>
           <div className="row">
             <div className="col-lg-8 col-md-8 col-sm-8 text-left">
-              <h6>From</h6>
+              <div className="d-flex">
+                <i class="fas fa-user pl-2 pr-2 pt-1"></i>
+                <h6>
+                  <strong>From</strong>
+                </h6>
+              </div>
+
               <textarea
-                className="form-control "
+                className="form-control mt-2"
                 placeholder="Your Company/Name + Address"
                 style={textAreaStyle}
                 value={from}
@@ -58,9 +64,14 @@ const Form = () => {
           </div>
           <div className="row">
             <div className="col-lg-8 col-md-8 col-sm-8 text-left">
-              <h6>Bill To</h6>
+              <div className="d-flex">
+                <i className="fas fa-file-invoice pl-2 pr-2 pt-1"></i>
+                <h6>
+                  <strong>Bill To</strong>
+                </h6>
+              </div>
               <textarea
-                className="form-control"
+                className="form-control mt-2"
                 placeholder="Your customer's billing address"
                 style={textAreaStyle}
                 value={to}
@@ -68,7 +79,9 @@ const Form = () => {
               />
             </div>
             <div className="col-lg-3 col-md-3 col-sm-3 offset-lg-1 text-left">
-              <h6>Invoice #</h6>
+              <h6>
+                <strong>Invoice # </strong>
+              </h6>
               <input
                 type="text"
                 placeholder="1"
@@ -77,7 +90,10 @@ const Form = () => {
                 value={invoiceNo}
                 onChange={(e) => setInvoiceNo(e.target.value)}
               />
-              <h6 className="pt-3">Invoice Date</h6>
+              <h6 className="pt-3">
+                {" "}
+                <strong>Invoice Date </strong>
+              </h6>
               <input
                 type="date"
                 className="form-control"
@@ -102,7 +118,9 @@ const Form = () => {
           <div className="row mt-4">
             <div className="col-lg-6 offset-lg-5 text-left ">
               <div className="d-flex">
-                <h5>Subtotal</h5>
+                <h5>
+                  <strong>Subtotal</strong>
+                </h5>
                 <span className="ml-auto">
                   {" "}
                   <strong>{subTotal}</strong>
@@ -110,7 +128,7 @@ const Form = () => {
               </div>
               <div className="d-flex" style={{ marginTop: "30px" }}>
                 <h4>
-                  TOTAL <a href="#">ZAR</a>
+                  <strong> TOTAL </strong> <a href="#">ZAR</a>
                 </h4>
                 <span className="ml-auto">
                   <strong>3500</strong>
@@ -121,7 +139,12 @@ const Form = () => {
 
           <div className="row mt-4">
             <div className="col-lg-8 col-md-8 col-sm-8 text-left">
-              <h6>Terms and conditions</h6>
+              <div className="d-flex">
+                <i className="fas fa-copy pl-2 pr-2 pt-1"></i>
+                <h6>
+                  <strong>Terms and Conditions</strong>
+                </h6>
+              </div>
               <textarea
                 className="form-control "
                 placeholder="Any extra information to provide to customer"
@@ -146,7 +169,7 @@ const Form = () => {
 
 const jumboStyle = {
   minHeight: "60vh",
-  marginTop: "5%",
+  marginTop: "3%",
   backgroundColor: "#D2E7F4",
   padding: "25px",
   marginBottom: "5px",

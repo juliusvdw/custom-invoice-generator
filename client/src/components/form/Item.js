@@ -15,9 +15,14 @@ const Item = () => {
       <>
         <div className="row mt-4">
           <div className="col-lg-6 text-left">
-            <h6>Description</h6>
+            <div className="d-flex">
+              <i className="fas fa-pen pl-2 pr-2 pt-1"></i>
+              <h6>
+                <strong>Description</strong>
+              </h6>
+            </div>
             <textarea
-              className="form-control mt-3"
+              className="form-control mt-2"
               style={descriptionStyle}
               name="description"
               value={item.description}
@@ -25,7 +30,9 @@ const Item = () => {
             />
           </div>
           <div className="col-lg-2 text-left">
-            <h6>Amount</h6>
+            <h6>
+              <strong>Amount</strong>
+            </h6>
             <input
               type="number"
               className="form-control mt-3 "
@@ -36,16 +43,18 @@ const Item = () => {
             />
           </div>
           <div className="col-lg-3 text-left">
-            <h6>Tax</h6>
+            <h6>
+              <strong>Tax</strong>
+            </h6>
             <button className="btn btn-warning  mt-2 form-control">
               Add Tax
             </button>
           </div>
-          <div
-            className="col-lg-1 my-auto text-left"
-            onClick={() => removeItem(item.id)}
-          >
-            <h4 className="text-danger mt-3">X</h4>
+          <div className="col-lg-1 my-auto text-left">
+            <i
+              className="fas fa-trash pl-2 pr-2 pt-1 text-danger delete"
+              onClick={() => removeItem(item.id)}
+            ></i>
           </div>
         </div>
       </>

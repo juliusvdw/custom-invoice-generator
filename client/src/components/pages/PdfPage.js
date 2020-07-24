@@ -10,7 +10,9 @@ const PdfPage = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-10 mx-auto text-center">
-            <h2 style={headingStyle}>New Invoice</h2>
+            <h2 style={headingStyle}>
+              <i className="fas fa-plus-circle pr-3"></i> New Invoice
+            </h2>
           </div>
         </div>
 
