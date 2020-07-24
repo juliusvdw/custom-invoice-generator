@@ -9,7 +9,7 @@ const FormState = (props) => {
   const initialState = {
     success: null,
     loading: false,
-    items: [{ description: "", amount: 0.0, tax: false, id: uuidv4() }],
+    items: [{ description: "", amount: null, tax: false, id: uuidv4() }],
   };
 
   const [state, dispatch] = useReducer(FormReducer, initialState);
@@ -37,7 +37,7 @@ const FormState = (props) => {
   //Add item
   const addItem = () => {
     //Create new item that will be added to the item state in the reducer
-    let newItem = { description: "", amount: 0.0, tax: false, id: uuidv4() };
+    let newItem = { description: "", amount: null, tax: false, id: uuidv4() };
 
     dispatch({ type: ADD_ITEM, payload: newItem });
   };

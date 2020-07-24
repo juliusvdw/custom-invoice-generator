@@ -12,12 +12,11 @@ const Form = () => {
   const [to, setTo] = useState("");
   const [invoiceNo, setInvoiceNo] = useState("");
   const [invoiceDate, setInvoiceDate] = useState("");
-  const [items, setitems] = useState("");
   const [terms, setTerms] = useState("");
 
   const formContext = useContext(FormContext);
 
-  const { sendData, addItem } = formContext;
+  const { sendData, addItem, items } = formContext;
 
   //Send form data to server for pdf generation
   const onSubmit = (e) => {
@@ -28,6 +27,10 @@ const Form = () => {
     console.log(formData);
     sendData(formData);
   };
+
+  //Modify output for subtotal amount
+  let subTotal = 0;
+  items.forEach((item) => (subTotal += Number(item.amount)));
 
   return (
     <>
@@ -102,7 +105,7 @@ const Form = () => {
                 <h5>Subtotal</h5>
                 <span className="ml-auto">
                   {" "}
-                  <strong>3500</strong>
+                  <strong>{subTotal}</strong>
                 </span>
               </div>
               <div className="d-flex" style={{ marginTop: "30px" }}>
