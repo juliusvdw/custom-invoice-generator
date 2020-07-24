@@ -84,36 +84,6 @@ const Form = () => {
 
           <hr style={{ marginTop: "35px" }} />
 
-          <div className="row">
-            <div className="col-lg-6 text-left">
-              <h6>Description</h6>
-              <textarea
-                className="form-control mt-3"
-                style={descriptionStyle}
-              />
-            </div>
-            <div className="col-lg-2 text-left">
-              <h6>Amount</h6>
-              <input
-                type="number"
-                className="form-control mt-3 "
-                placeholder="0.0"
-              />
-            </div>
-            <div className="col-lg-3 text-left">
-              <h6>Tax</h6>
-              <button className="btn btn-warning  mt-2 form-control">
-                Add Tax
-              </button>
-            </div>
-            <div className="col-lg-1 my-auto text-left">
-              <h4 className="text-danger mt-3">X</h4>
-            </div>
-          </div>
-
-          <button className="btn btn-warning form-control mt-3">
-            Add New Item
-          </button>
           <div className="row mt-4">
             <div className="col-lg-6 offset-lg-5 text-left ">
               <div className="d-flex">
