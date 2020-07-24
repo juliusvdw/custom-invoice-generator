@@ -7,7 +7,7 @@ import FormContext from "../../context/form/formContext";
 const Item = () => {
   const formContext = useContext(FormContext);
 
-  const { items, modifyItem, addItem } = formContext;
+  const { items, modifyItem, removeItem } = formContext;
 
   //Create items output list based on item State
   const itemOutput = items.map((item) => {
@@ -41,7 +41,10 @@ const Item = () => {
               Add Tax
             </button>
           </div>
-          <div className="col-lg-1 my-auto text-left">
+          <div
+            className="col-lg-1 my-auto text-left"
+            onClick={() => removeItem(item.id)}
+          >
             <h4 className="text-danger mt-3">X</h4>
           </div>
         </div>

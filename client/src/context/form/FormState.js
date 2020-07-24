@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { MODIFY_ITEM, ADD_ITEM } from "../Types";
+import { MODIFY_ITEM, ADD_ITEM, REMOVE_ITEM } from "../Types";
 
 import FormContext from "./formContext";
 import FormReducer from "./formReducer";
@@ -25,8 +25,10 @@ const FormState = (props) => {
     //Find index of item that is being modified with unique id
     const index = state.items.findIndex((item) => item.id === id);
 
+    console.log(state.items);
+
     //Modify the item with the new data that will be sent to the reducer
-    let data = { ...state.items[index] };
+    let data = state.items[index];
     data[e.target.name] = e.target.value;
 
     dispatch({ type: MODIFY_ITEM, payload: { id, data } });
@@ -40,6 +42,11 @@ const FormState = (props) => {
     dispatch({ type: ADD_ITEM, payload: newItem });
   };
 
+  const removeItem = (id) => {
+    //Dispatch REMOVE_ITEM to reducer and remove item that contains specific id
+    dispatch({ type: REMOVE_ITEM, payload: id });
+  };
+
   return (
     <FormContext.Provider
       value={{
@@ -47,6 +54,7 @@ const FormState = (props) => {
         sendData,
         modifyItem,
         addItem,
+        removeItem,
       }}
     >
       {props.children}
