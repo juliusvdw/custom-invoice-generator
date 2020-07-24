@@ -17,7 +17,7 @@ const Form = () => {
 
   const formContext = useContext(FormContext);
 
-  const { sendData } = formContext;
+  const { sendData, addItem } = formContext;
 
   //Send form data to server for pdf generation
   const onSubmit = (e) => {
@@ -86,6 +86,13 @@ const Form = () => {
           </div>
 
           <Item />
+
+          <button
+            className="btn btn-warning form-control mt-3"
+            onClick={() => addItem()}
+          >
+            Add New Item
+          </button>
 
           <hr style={{ marginTop: "35px" }} />
 

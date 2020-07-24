@@ -7,7 +7,7 @@ import FormContext from "../../context/form/formContext";
 const Item = () => {
   const formContext = useContext(FormContext);
 
-  const { items, modifyItem } = formContext;
+  const { items, modifyItem, addItem } = formContext;
 
   //Create items output list based on item State
   const itemOutput = items.map((item) => {
@@ -45,10 +45,6 @@ const Item = () => {
             <h4 className="text-danger mt-3">X</h4>
           </div>
         </div>
-
-        <button className="btn btn-warning form-control mt-3">
-          Add New Item
-        </button>
       </>
     );
   });

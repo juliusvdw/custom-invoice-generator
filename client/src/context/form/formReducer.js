@@ -1,4 +1,4 @@
-import { MODIFY_ITEM } from "../Types";
+import { MODIFY_ITEM, ADD_ITEM } from "../Types";
 
 export default (state, action) => {
   switch (action.type) {
@@ -9,6 +9,11 @@ export default (state, action) => {
           (item) =>
             item.id === action.payload.id && item === action.payload.data
         ),
+      };
+    case ADD_ITEM:
+      return {
+        ...state,
+        items: [...state.items, action.payload],
       };
     default:
       return state;
