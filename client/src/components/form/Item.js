@@ -1,24 +1,27 @@
 import React, { useContext } from "react";
+import { v4 as uuidv4 } from "uuid";
 
-//Bring on context
+//Bring in context
 import FormContext from "../../context/form/formContext";
 
 const Item = () => {
   const formContext = useContext(FormContext);
 
-  const { items } = formContext;
+  const { items, modifyItem } = formContext;
 
   //Create items output list based on item State
   const itemOutput = items.map((item) => {
     return (
       <>
-        <div className="row">
+        <div className="row mt-4">
           <div className="col-lg-6 text-left">
             <h6>Description</h6>
             <textarea
               className="form-control mt-3"
               style={descriptionStyle}
+              name="description"
               value={item.description}
+              onChange={(e) => modifyItem(item.id, e)}
             />
           </div>
           <div className="col-lg-2 text-left">
@@ -27,7 +30,9 @@ const Item = () => {
               type="number"
               className="form-control mt-3 "
               placeholder="0.0"
+              name="amount"
               value={item.amount}
+              onChange={(e) => modifyItem(item.id, e)}
             />
           </div>
           <div className="col-lg-3 text-left">

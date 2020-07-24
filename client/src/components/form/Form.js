@@ -3,6 +3,9 @@ import React, { useContext, useState } from "react";
 //Bring in context
 import FormContext from "../../context/form/formContext";
 
+//Bring in components
+import Item from "./Item";
+
 const Form = () => {
   //Set up form state with useState
   const [from, setFrom] = useState("");
@@ -81,6 +84,8 @@ const Form = () => {
               />
             </div>
           </div>
+
+          <Item />
 
           <hr style={{ marginTop: "35px" }} />
 
