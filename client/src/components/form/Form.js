@@ -167,6 +167,8 @@ const Form = () => {
   );
 };
 
+//Create style Variables
+
 const jumboStyle = {
   minHeight: "60vh",
   marginTop: "3%",
