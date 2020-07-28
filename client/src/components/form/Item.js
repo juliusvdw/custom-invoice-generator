@@ -65,6 +65,8 @@ const Item = () => {
   return itemOutput;
 };
 
+//Create style vars
+
 const descriptionStyle = {
   minHeight: "40px",
   borderRadius: "7px",
