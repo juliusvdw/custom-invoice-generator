@@ -23,6 +23,8 @@ const Navbar = () => {
   );
 };
 
+//create style vars
+
 const navListStyle = {
   paddingRight: "5%",
 };

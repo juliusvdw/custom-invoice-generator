@@ -48,6 +48,8 @@ const HomePage = () => {
   );
 };
 
+//Create style vars
+
 const imageStyle = {
   height: "100%",
   width: "110%",

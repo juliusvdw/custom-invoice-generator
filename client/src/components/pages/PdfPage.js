@@ -26,6 +26,8 @@ const PdfPage = () => {
   );
 };
 
+//Create style vars
+
 const headingStyle = {
   marginTop: "12%",
 };
