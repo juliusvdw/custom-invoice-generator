@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  useEffect(() => {
+    //Determine navbar color based on path. Pdf page requires background color
+
+    window.location.pathname === "/pdf"
+      ? (navClass = "navbar")
+      : (navClass = "navbar fixed-top");
+  }, []);
+
+  let navClass;
+
   return (
-    <nav className="navbar   fixed-top">
-      <p className="navbar-brand" href="#" style={logoStyle}>
+    <nav
+      className={
+        window.location.pathname === "/pdf" ? "navbar" : "navbar fixed-top"
+      }
+      style={{ height: "70px" }}
+    >
+      <p className="navbar-brand " href="#" style={logoStyle}>
         <span className="text-primary">easy</span>invoice
       </p>
 
@@ -31,7 +46,7 @@ const navListStyle = {
 
 const logoStyle = {
   paddingLeft: "5%",
-  fontSize: "2.5rem",
+  fontSize: "2rem",
 };
 
 export default Navbar;
