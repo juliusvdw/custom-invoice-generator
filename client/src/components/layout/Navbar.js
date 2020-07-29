@@ -20,7 +20,10 @@ const Navbar = () => {
       style={{ height: "70px" }}
     >
       <p className="navbar-brand " href="#" style={logoStyle}>
-        <span className="text-primary">easy</span>invoice
+        <Link to="/" style={{ textDecoration: "none" }}>
+          {" "}
+          <span>easy</span>invoice{" "}
+        </Link>
       </p>
 
       <ul className="navbar-nav ml-auto d-none d-md-block" style={navListStyle}>
