@@ -29,7 +29,7 @@ const PdfPage = () => {
 //Create style vars
 
 const headingStyle = {
-  marginTop: "12%",
+  marginTop: "4%",
 };
 
 export default PdfPage;
