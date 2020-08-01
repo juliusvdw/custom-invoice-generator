@@ -1,10 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+
+//Bring in layout components
+import TaxModal from "../modals/TaxModal";
 
 //Bring in context
 import FormContext from "../../context/form/formContext";
 
 const Item = () => {
+  //Modal state for modal display
+  const [taxModalShow, setTaxModalShow] = useState(false);
+
   const formContext = useContext(FormContext);
 
   const { items, modifyItem, removeItem } = formContext;
@@ -46,7 +52,10 @@ const Item = () => {
             <h6>
               <strong>Tax</strong>
             </h6>
-            <button className="btn btn-warning  mt-2 form-control">
+            <button
+              className="btn btn-warning  mt-2 form-control"
+              onClick={() => setTaxModalShow(true)}
+            >
               Add Tax
             </button>
           </div>
@@ -56,6 +65,8 @@ const Item = () => {
               onClick={() => removeItem(item.id)}
             ></i>
           </div>
+
+          <TaxModal show={taxModalShow} onHide={() => setTaxModalShow(false)} />
         </div>
       </>
     );

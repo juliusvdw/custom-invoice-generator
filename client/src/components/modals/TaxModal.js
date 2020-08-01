@@ -23,13 +23,10 @@ const TaxModal = (props) => {
         className="mx-auto "
       >
         <input
-          style={inputStyle}
           type="number"
           placeholder="Tax percentage"
           className="form-control mb-4"
-          value={taxAmount}
           name="taxAmount"
-          onChange={(e) => setTax(e.target.value)}
         />
       </Modal.Body>
       <Modal.Footer>

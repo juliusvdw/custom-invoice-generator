@@ -9,7 +9,7 @@ const FormState = (props) => {
   const initialState = {
     success: null,
     loading: false,
-    items: [{ description: "", amount: null, tax: false, id: uuidv4() }],
+    items: [{ description: "", amount: null, tax: null, id: uuidv4() }],
   };
 
   const [state, dispatch] = useReducer(FormReducer, initialState);
