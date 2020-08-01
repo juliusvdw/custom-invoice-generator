@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { MODIFY_ITEM, ADD_ITEM, REMOVE_ITEM } from "../Types";
+import { MODIFY_ITEM, ADD_ITEM, REMOVE_ITEM, ADD_TAX_ID } from "../Types";
 
 import FormContext from "./formContext";
 import FormReducer from "./formReducer";
@@ -10,6 +10,7 @@ const FormState = (props) => {
     success: null,
     loading: false,
     items: [{ description: "", amount: null, tax: null, id: uuidv4() }],
+    activeTaxID: null,
   };
 
   const [state, dispatch] = useReducer(FormReducer, initialState);
@@ -47,14 +48,21 @@ const FormState = (props) => {
     dispatch({ type: REMOVE_ITEM, payload: id });
   };
 
+  const addTaxID = (id) => {
+    console.log(id);
+    dispatch({ type: ADD_TAX_ID, payload: id });
+  };
+
   return (
     <FormContext.Provider
       value={{
         items: state.items,
+        activeTaxID: state.activeTaxID,
         sendData,
         modifyItem,
         addItem,
         removeItem,
+        addTaxID,
       }}
     >
       {props.children}

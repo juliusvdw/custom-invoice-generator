@@ -13,7 +13,13 @@ const Item = () => {
 
   const formContext = useContext(FormContext);
 
-  const { items, modifyItem, removeItem } = formContext;
+  const { items, modifyItem, removeItem, addTaxID } = formContext;
+
+  //Create handleTaxModal to add active taxID + display tax modal
+  const handleTaxModal = async (item) => {
+    await addTaxID(item.id);
+    setTaxModalShow(true);
+  };
 
   //Create items output list based on item State
   const itemOutput = items.map((item) => {
@@ -54,7 +60,7 @@ const Item = () => {
             </h6>
             <button
               className="btn btn-warning  mt-2 form-control"
-              onClick={() => setTaxModalShow(true)}
+              onClick={() => handleTaxModal(item)}
             >
               Add Tax
             </button>
