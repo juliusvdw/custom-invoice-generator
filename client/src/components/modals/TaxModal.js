@@ -13,6 +13,17 @@ const TaxModal = (props) => {
 
   const { addTax, activeTaxID } = formContext;
 
+  //addTax func
+  const addTaxHandler = async (activeTaxID, taxAmount) => {
+    try {
+      await addTax(activeTaxID, taxAmount);
+      props.setTaxModalShow(false);
+      return;
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <Modal
       {...props}
@@ -47,7 +58,7 @@ const TaxModal = (props) => {
           type="submit"
           className="form-control w-90"
           style={{ height: "50px" }}
-          onClick={() => addTax(activeTaxID)}
+          onClick={() => addTaxHandler(activeTaxID, taxAmount)}
         >
           <strong>Add tax</strong>
         </Button>

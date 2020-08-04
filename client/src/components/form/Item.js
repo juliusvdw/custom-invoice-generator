@@ -72,7 +72,11 @@ const Item = () => {
             ></i>
           </div>
 
-          <TaxModal show={taxModalShow} onHide={() => setTaxModalShow(false)} />
+          <TaxModal
+            show={taxModalShow}
+            onHide={() => setTaxModalShow(false)}
+            setTaxModalShow={setTaxModalShow}
+          />
         </div>
       </>
     );

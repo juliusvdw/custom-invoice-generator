@@ -30,6 +30,13 @@ export default (state, action) => {
         ...state,
         activeTaxID: action.payload,
       };
+    case ADD_TAX:
+      return {
+        ...state,
+        items: state.items.map((item) =>
+          item.id === action.payload.id ? action.payload.data : item
+        ),
+      };
     default:
       return state;
   }

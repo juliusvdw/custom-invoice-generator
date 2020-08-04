@@ -61,8 +61,13 @@ const FormState = (props) => {
   };
 
   //Add tax to specific item
-  const addTax = (id) => {
-    dispatch({ type: ADD_TAX_ID, payload: id });
+  const addTax = (id, amount) => {
+    const index = state.items.findIndex((item) => item.id === id);
+
+    let data = state.items[index];
+    data.tax = amount;
+
+    dispatch({ type: ADD_TAX, payload: { id, data } });
   };
 
   return (
