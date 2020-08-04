@@ -58,12 +58,16 @@ const Item = () => {
             <h6>
               <strong>Tax</strong>
             </h6>
-            <button
-              className="btn btn-warning  mt-2 form-control"
-              onClick={() => handleTaxModal(item)}
-            >
-              Add Tax
-            </button>
+            {item.tax === null ? (
+              <button
+                className="btn btn-warning  mt-2 form-control"
+                onClick={() => handleTaxModal(item)}
+              >
+                Add Tax
+              </button>
+            ) : (
+              <h4 className="mt-3 text-danger">{item.tax}%</h4>
+            )}
           </div>
           <div className="col-lg-1 my-auto text-left">
             <i

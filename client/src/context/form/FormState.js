@@ -44,7 +44,7 @@ const FormState = (props) => {
   //Add item
   const addItem = () => {
     //Create new item that will be added to the item state in the reducer
-    let newItem = { description: "", amount: null, tax: false, id: uuidv4() };
+    let newItem = { description: "", amount: null, tax: null, id: uuidv4() };
 
     dispatch({ type: ADD_ITEM, payload: newItem });
   };
