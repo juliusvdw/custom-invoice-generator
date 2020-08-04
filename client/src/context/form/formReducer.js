@@ -1,4 +1,10 @@
-import { MODIFY_ITEM, ADD_ITEM, REMOVE_ITEM, ADD_TAX_ID } from "../Types";
+import {
+  MODIFY_ITEM,
+  ADD_ITEM,
+  REMOVE_ITEM,
+  ADD_TAX_ID,
+  ADD_TAX,
+} from "../Types";
 
 export default (state, action) => {
   switch (action.type) {

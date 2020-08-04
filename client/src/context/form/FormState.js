@@ -1,6 +1,12 @@
 import React, { useReducer } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { MODIFY_ITEM, ADD_ITEM, REMOVE_ITEM, ADD_TAX_ID } from "../Types";
+import {
+  MODIFY_ITEM,
+  ADD_ITEM,
+  REMOVE_ITEM,
+  ADD_TAX_ID,
+  ADD_TAX,
+} from "../Types";
 
 import FormContext from "./formContext";
 import FormReducer from "./formReducer";
@@ -48,8 +54,14 @@ const FormState = (props) => {
     dispatch({ type: REMOVE_ITEM, payload: id });
   };
 
+  //Add active ID to activeTaxID
   const addTaxID = (id) => {
     console.log(id);
+    dispatch({ type: ADD_TAX_ID, payload: id });
+  };
+
+  //Add tax to specific item
+  const addTax = (id) => {
     dispatch({ type: ADD_TAX_ID, payload: id });
   };
 
@@ -63,6 +75,7 @@ const FormState = (props) => {
         addItem,
         removeItem,
         addTaxID,
+        addTax,
       }}
     >
       {props.children}
