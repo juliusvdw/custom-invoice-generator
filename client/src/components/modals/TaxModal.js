@@ -6,6 +6,9 @@ import Button from "react-bootstrap/Button";
 import FormContext from "../../context/form/formContext";
 
 const TaxModal = (props) => {
+  //Store taxAmount state
+  const [taxAmount, setTaxAmount] = useState(null);
+
   const formContext = useContext(FormContext);
 
   const { addTax, activeTaxID } = formContext;
@@ -35,6 +38,8 @@ const TaxModal = (props) => {
           placeholder="Tax percentage"
           className="form-control mb-4"
           name="taxAmount"
+          value={taxAmount}
+          onChange={(e) => setTaxAmount(e.target.value)}
         />
       </Modal.Body>
       <Modal.Footer>
