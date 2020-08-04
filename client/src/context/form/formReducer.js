@@ -1,4 +1,4 @@
-import { MODIFY_ITEM, ADD_ITEM, REMOVE_ITEM } from "../Types";
+import { MODIFY_ITEM, ADD_ITEM, REMOVE_ITEM, ADD_TAX_ID } from "../Types";
 
 export default (state, action) => {
   switch (action.type) {
@@ -18,6 +18,11 @@ export default (state, action) => {
       return {
         ...state,
         items: state.items.filter((item) => item.id !== action.payload),
+      };
+    case ADD_TAX_ID:
+      return {
+        ...state,
+        activeTaxID: action.payload,
       };
     default:
       return state;
