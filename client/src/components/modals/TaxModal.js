@@ -8,7 +8,7 @@ import FormContext from "../../context/form/formContext";
 const TaxModal = (props) => {
   const formContext = useContext(FormContext);
 
-  const { addTaxID } = formContext;
+  const { addTaxID, activeTaxID } = formContext;
 
   return (
     <Modal
@@ -42,7 +42,7 @@ const TaxModal = (props) => {
           type="submit"
           className="form-control w-90"
           style={{ height: "50px" }}
-          onClick={() => console.log(addTaxID)}
+          onClick={() => console.log(activeTaxID)}
         >
           <strong>Add tax</strong>
         </Button>
