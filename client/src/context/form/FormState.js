@@ -1,5 +1,6 @@
 import React, { useReducer } from "react";
 import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
 import {
   MODIFY_ITEM,
   ADD_ITEM,
@@ -22,10 +23,15 @@ const FormState = (props) => {
   const [state, dispatch] = useReducer(FormReducer, initialState);
 
   //Send formData to the server
-  const sendData = (formData) => {
+  const sendData = async (formData) => {
+    //Turn data into HTML template
+
     try {
-      console.log("sending data");
-    } catch (err) {}
+      console.log("Convert call requested");
+      const invoice = await axios.get("/convert");
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   //Modify item details
