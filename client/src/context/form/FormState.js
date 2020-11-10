@@ -24,6 +24,7 @@ const FormState = (props) => {
   //Send formData to the server
   const sendData = (formData) => {
     try {
+      console.log("sending data");
     } catch (err) {}
   };
 

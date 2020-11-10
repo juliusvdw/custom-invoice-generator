@@ -23,7 +23,7 @@ const Form = () => {
     e.preventDefault();
 
     //Create formData object to be sent to server
-    const formData = { from, to, invoiceNo, invoiceDate, terms };
+    const formData = { from, to, invoiceNo, invoiceDate, terms, items };
     console.log(formData);
     sendData(formData);
   };
