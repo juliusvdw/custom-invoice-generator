@@ -59,12 +59,12 @@ const Item = () => {
               <strong>Tax</strong>
             </h6>
             {item.tax === null ? (
-              <button
+              <div
                 className="btn btn-warning  mt-2 form-control"
                 onClick={() => handleTaxModal(item)}
               >
                 Add Tax
-              </button>
+              </div>
             ) : (
               <h4 className="mt-3 text-danger">{item.tax}%</h4>
             )}

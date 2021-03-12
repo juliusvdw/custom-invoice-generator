@@ -34,7 +34,7 @@ const Form = () => {
 
   return (
     <>
-      <form onSubmit={onSubmit}>
+      <form>
         <div className="jumbotron " style={jumboStyle}>
           <div className="row">
             <div className="col-lg-8 col-md-8 col-sm-8 text-left">
@@ -106,12 +106,12 @@ const Form = () => {
 
           <Item />
 
-          <button
+          <div
             className="btn btn-warning form-control mt-3"
             onClick={() => addItem()}
           >
             Add New Item
-          </button>
+          </div>
 
           <hr style={{ marginTop: "35px" }} />
 
@@ -159,6 +159,7 @@ const Form = () => {
           type="submit"
           className="btn btn-warning form-control mt-3 mb-4"
           style={{ minHeight: "50px" }}
+          onClick={onSubmit}
         >
           Download invoice PDF
         </button>

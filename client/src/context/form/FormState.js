@@ -29,6 +29,8 @@ const FormState = (props) => {
     try {
       console.log("Convert call requested");
       const invoice = await axios.get("/convert");
+
+      window.open(invoice, "_blank");
     } catch (err) {
       console.log(err);
     }
