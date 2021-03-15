@@ -28,9 +28,24 @@ const FormState = (props) => {
 
     try {
       console.log("Convert call requested");
-      const invoice = await axios.get("/convert");
+      const invoice = await axios("convert", {
+        method: "GET",
+        responseType: "blob",
+      });
 
-      window.open(invoice, "_blank");
+      //Create a Blob from the PDF Stream
+      const file = new Blob([invoice.data], {
+        type: "application/pdf",
+      });
+      //Build a URL from the file
+      const fileURL = URL.createObjectURL(file);
+      //Open the URL on new Window
+      window.open(fileURL);
+
+      console.log(invoice.data);
+      console.log(typeof invoice.data);
+
+      // window.open(fileURL, "_blank");
     } catch (err) {
       console.log(err);
     }
