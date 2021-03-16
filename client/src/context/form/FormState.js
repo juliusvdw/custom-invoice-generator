@@ -40,7 +40,7 @@ const FormState = (props) => {
       //Build a URL from the file
       const fileURL = URL.createObjectURL(file);
       //Open the URL on new Window
-      window.open(fileURL);
+      window.open(fileURL, "__blank");
 
       console.log(invoice.data);
       console.log(typeof invoice.data);
