@@ -28,10 +28,7 @@ const FormState = (props) => {
 
     try {
       console.log("Convert call requested");
-      const invoice = await axios("convert", {
-        method: "GET",
-        responseType: "blob",
-      });
+      const invoice = await axios.post("/convert", { data: formData });
 
       //Create a Blob from the PDF Stream
       const file = new Blob([invoice.data], {

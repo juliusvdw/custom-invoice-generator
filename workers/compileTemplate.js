@@ -9,9 +9,8 @@ const compile = async (templateName, data) => {
       "templates",
       `${templateName}.hbs`
     );
-    console.log(filePath);
+
     const html = await fs.readFile(filePath, "utf-8");
-    console.log(html);
 
     return handlebars.compile(html)(data);
   } catch (err) {
