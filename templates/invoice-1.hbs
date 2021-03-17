@@ -1,1 +1,247 @@
-<h1>Testing the new template </h1>
+<style>
+    body {
+        box-sizing: border-box;
+        padding: 70px;
+    }
+
+    .title {
+        color: orange;
+    }
+
+    .address-container p {
+        margin: 2px;
+    }
+
+    .invoice-details {
+        margin-top: 70px;
+    }
+
+    .bill-to p {
+        margin: 2px;
+    }
+
+    .bill-to {
+        flex: 2;
+    }
+
+    .invoice-information {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .invoice-information span {
+        margin-left: 50px;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .info-right p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 50px;
+    }
+
+    .invoice-details {
+        display: flex;
+        flex-direction: row;
+    }
+
+    h4 {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .items-table-container {
+        margin-top: 60px;
+        width: 100%;
+    }
+
+    th {
+        background-color: red;
+        border: 1px solid black;
+
+    }
+
+    td {
+        text-align: center;
+        padding-top: 8px
+    }
+
+    .description-col {
+        width: 40%;
+    }
+
+    .table {
+        width: 100%;
+    }
+
+    .row {
+        width: 100%;
+        margin-top: 7px;
+    }
+
+    .subtotal-row {
+        margin-top: 30px
+    }
+
+    .row-content {
+        margin-left: auto;
+        display: flex;
+        width: 45%;
+    }
+
+    .subtotal-heading {
+        width: 50%;
+        text-align: center;
+    }
+
+    .subtotal-price {
+        width: 50%;
+        text-align: center;
+    }
+
+    .tax-heading {
+        width: 50%;
+        text-align: center;
+    }
+
+    .tax-price {
+        width: 50%;
+        text-align: center;
+    }
+
+    .total-heading {
+        width: 50%;
+        text-align: center;
+    }
+
+    .total-price {
+        width: 50%;
+        text-align: center;
+    }
+
+    .terms-container {
+        position: absolute;
+        bottom: 110
+    }
+
+    .terms-container p {
+        font-size: 13px
+    }
+</style>
+
+<html>
+
+<body>
+    <h2>Zef side records</h2>
+    <div class="address-container">
+        <p>42 Barber Street</p>
+        <p>Cape Town</p>
+        <p>South Africa</p>
+    </div>
+
+    <div class="invoice-details">
+        <div class="bill-to">
+            <h4>Bill To</h4>
+            <p>Vivian Jones</p>
+            <p>37 Hermanus street</p>
+            <p>Cape Town, South Africa</p>
+        </div>
+        <div class="invoice-information">
+            <div class="info-left">
+                <h4>Invoice #</h4>
+                <h4>Invoice Date</h4>
+                <h4>Due Date</h4>
+            </div>
+
+            <div class="info-right">
+                <p>221014</p>
+                <p>23/08/1994</p>
+                <p>23/08/1994</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="items-table-container">
+        <table class="table">
+            <tr>
+                <th class='quantity-col'>QTY</th>
+                <th class="description-col">Description</th>
+                <th class='price-col'>Unit Price</th>
+                <th class='amount-col'>Amount</th>
+            </tr>
+
+            <tr>
+                <td class='quantity-col'>1</td>
+                <td class="description-col">Zeal Hydro vertical hydroponic system</td>
+                <td class='price-col'>2900</td>
+                <td class='amount-col'>2900</td>
+
+
+            </tr>
+
+            <tr>
+                <td class='quantity-col'>1</td>
+                <td class="description-col">Zeal Hydro side pipes</td>
+                <td class='price-col'>250</td>
+                <td class='amount-col'>250</td>
+
+
+            </tr>
+
+            <tr>
+                <td class='quantity-col'>3</td>
+                <td class="description-col">Zeal Hydro Net Pots</td>
+                <td class='price-col'>400</td>
+                <td class='amount-col'>400</td>
+            </tr>
+
+
+
+        </table>
+    </div>
+
+    <div class='row subtotal-row'>
+        <div class='row-content'>
+            <div class='subtotal-heading'>
+                <strong>Subtotal</strong>
+            </div>
+            <div class='subtotal-price'>
+                R3499.00
+            </div>
+        </div>
+    </div>
+    <div class='row tax-row'>
+        <div class='row-content'>
+            <div class='tax-heading'>
+                <strong>Vat 15%</strong>
+            </div>
+            <div class='tax-price'>
+                R450.00
+            </div>
+        </div>
+    </div>
+    <div class='row total-row'>
+        <div class='row-content'>
+            <div class='total-heading'>
+                <strong>Subtotal</strong>
+            </div>
+            <div class='total-price'>
+                3900.00
+            </div>
+        </div>
+    </div>
+
+    <div class='terms-container'>
+        <h4>Terms and conditions</h4>
+
+        <p>Payment due within 14 days of purchase</p>
+        <p>Branch: FNB</p>
+        <p>Acc no: 0120 5105 5105</p>
+        <p>Acc holder: M van der westhuizen </p>
+    </div>
+
+</body>
+
+</html>
