@@ -4,6 +4,7 @@ import {
   REMOVE_ITEM,
   ADD_TAX_ID,
   ADD_TAX,
+  SET_TOTAL,
 } from "../Types";
 
 export default (state, action) => {
@@ -36,6 +37,11 @@ export default (state, action) => {
         items: state.items.map((item) =>
           item.id === action.payload.id ? action.payload.data : item
         ),
+      };
+    case SET_TOTAL:
+      return {
+        ...state,
+        total: action.payload,
       };
     default:
       return state;
