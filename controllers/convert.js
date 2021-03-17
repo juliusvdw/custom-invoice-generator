@@ -5,8 +5,7 @@ const converter = require("../workers/converter");
 const convert = async (req, res) => {
   try {
     console.log("converter running");
-    const data = req.body.data;
-    console.log(req);
+    const data = req.body.formData;
 
     const pdf = await converter(data);
 
