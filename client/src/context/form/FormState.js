@@ -7,6 +7,7 @@ import {
   REMOVE_ITEM,
   ADD_TAX_ID,
   ADD_TAX,
+  SET_TOTAL,
 } from "../Types";
 
 import FormContext from "./formContext";
@@ -18,6 +19,7 @@ const FormState = (props) => {
     loading: false,
     items: [{ description: "", amount: null, tax: null, id: uuidv4() }],
     activeTaxID: null,
+    total: 0,
   };
 
   const [state, dispatch] = useReducer(FormReducer, initialState);
@@ -25,6 +27,8 @@ const FormState = (props) => {
   //Send formData to the server
   const sendData = async (formData) => {
     //Turn data into HTML template
+
+    calculateTotal();
 
     try {
       console.log("Convert call requested");
@@ -91,6 +95,16 @@ const FormState = (props) => {
     data.tax = amount;
 
     dispatch({ type: ADD_TAX, payload: { id, data } });
+  };
+
+  //Calculate total on form submission
+  const calculateTotal = () => {
+    let total = 0;
+
+    state.items.forEach((item) => {
+      total += Number(item.amount);
+      dispatch({ type: SET_TOTAL, payload: total });
+    });
   };
 
   return (
