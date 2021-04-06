@@ -7,7 +7,6 @@ import {
   REMOVE_ITEM,
   ADD_TAX_ID,
   ADD_TAX,
-  SET_TOTAL,
 } from "../Types";
 
 import FormContext from "./formContext";
@@ -91,23 +90,6 @@ const FormState = (props) => {
 
     dispatch({ type: ADD_TAX, payload: { id, data } });
   };
-
-  //Calculate total on form submission
-  // const calculateTotals = async () => {
-  //   let total = 0,
-  //     subTotal = 0,
-  //     taxTotal = 0;
-
-  //   state.items.forEach((item) => {
-  //     subTotal += Number(item.amount);
-  //     taxTotal += Number(item.amount * Number(item.tax / 100));
-  //   });
-
-  //   total = subTotal + taxTotal;
-  //   await dispatch({ type: SET_TOTAL, payload: { subTotal, taxTotal, total } });
-
-  //   console.log("Subtotal", subTotal, "total", total, "tax total", taxTotal);
-  // };
 
   return (
     <FormContext.Provider

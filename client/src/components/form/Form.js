@@ -23,7 +23,17 @@ const Form = () => {
     e.preventDefault();
 
     //Create formData object to be sent to server
-    const formData = { from, to, invoiceNo, invoiceDate, terms, items };
+    const formData = {
+      from,
+      to,
+      invoiceNo,
+      invoiceDate,
+      terms,
+      items,
+      total,
+      taxTotal,
+      subTotal,
+    };
     console.log(formData);
     sendData(formData);
   };
@@ -34,12 +44,12 @@ const Form = () => {
 
   //Modify output for taxTotal amount
   let taxTotal = 0;
-  items.forEach((item) => (subTotal += Number(item.amount)));
+  items.forEach(
+    (item) => (taxTotal += Number(item.amount * Number(item.tax / 100)))
+  );
 
   //Modify output for total amount
-  let total = 0;
-  items.forEach((item) => (subTotal += Number(item.amount)));
-
+  let total = subTotal + taxTotal;
   return (
     <>
       <form>
@@ -134,12 +144,23 @@ const Form = () => {
                   <strong>{subTotal}</strong>
                 </span>
               </div>
+              {taxTotal > 0 && (
+                <div className="d-flex mt-2">
+                  <h5>
+                    <strong>Tax</strong>
+                  </h5>
+                  <span className="ml-auto">
+                    {" "}
+                    <strong>{taxTotal}</strong>
+                  </span>
+                </div>
+              )}
               <div className="d-flex" style={{ marginTop: "30px" }}>
                 <h4>
                   <strong> TOTAL </strong> <a href="#">ZAR</a>
                 </h4>
                 <span className="ml-auto">
-                  <strong>3500</strong>
+                  <strong>{total}</strong>
                 </span>
               </div>
             </div>
