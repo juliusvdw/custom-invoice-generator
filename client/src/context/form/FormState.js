@@ -30,7 +30,10 @@ const FormState = (props) => {
   const sendData = async (formData) => {
     //Turn data into HTML template
 
+    //Calculate totals
     calculateTotals();
+
+    console.log(formData);
 
     try {
       console.log("Convert call requested");
@@ -118,6 +121,9 @@ const FormState = (props) => {
     <FormContext.Provider
       value={{
         items: state.items,
+        subTotal: state.subTotal,
+        total: state.total,
+        taxTotal: state.taxTotal,
         activeTaxID: state.activeTaxID,
         sendData,
         modifyItem,
@@ -125,6 +131,7 @@ const FormState = (props) => {
         removeItem,
         addTaxID,
         addTax,
+        calculateTotals,
       }}
     >
       {props.children}
