@@ -20,6 +20,7 @@ const FormState = (props) => {
     items: [{ description: "", amount: null, tax: null, id: uuidv4() }],
     activeTaxID: null,
     total: 0,
+    taxTotal: 0,
   };
 
   const [state, dispatch] = useReducer(FormReducer, initialState);
@@ -28,7 +29,7 @@ const FormState = (props) => {
   const sendData = async (formData) => {
     //Turn data into HTML template
 
-    calculateTotal();
+    calculateTotals();
 
     try {
       console.log("Convert call requested");
@@ -58,8 +59,6 @@ const FormState = (props) => {
   const modifyItem = (id, e) => {
     //Find index of item that is being modified with unique id
     const index = state.items.findIndex((item) => item.id === id);
-
-    console.log(state.items);
 
     //Modify the item with the new data that will be sent to the reducer
     let data = state.items[index];
@@ -98,13 +97,17 @@ const FormState = (props) => {
   };
 
   //Calculate total on form submission
-  const calculateTotal = () => {
-    let total = 0;
+  const calculateTotals = () => {
+    let total = 0,
+      taxTotal = 0;
 
     state.items.forEach((item) => {
       total += Number(item.amount);
-      dispatch({ type: SET_TOTAL, payload: total });
+      taxTotal += Number(item.amount * Number(item.tax / 100));
+      dispatch({ type: SET_TOTAL, payload: { total, taxTotal } });
     });
+
+    console.log(total, taxTotal);
   };
 
   return (
