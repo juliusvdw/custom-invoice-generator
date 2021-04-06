@@ -38,13 +38,7 @@ export default (state, action) => {
           item.id === action.payload.id ? action.payload.data : item
         ),
       };
-    case SET_TOTAL:
-      return {
-        ...state,
-        subTotal: action.payload.subTotal,
-        total: action.payload.total,
-        taxTotal: action.payload.taxTotal,
-      };
+    
     default:
       return state;
   }

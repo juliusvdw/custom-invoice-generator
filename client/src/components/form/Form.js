@@ -16,36 +16,29 @@ const Form = () => {
 
   const formContext = useContext(FormContext);
 
-  const {
-    sendData,
-    addItem,
-    items,
-    subTotal,
-    taxTotal,
-    total,
-    calculateTotals,
-  } = formContext;
+  const { sendData, addItem, items } = formContext;
 
   //Send form data to server for pdf generation
   const onSubmit = (e) => {
     e.preventDefault();
 
-    calculateTotals();
     //Create formData object to be sent to server
-    const formData = {
-      from,
-      to,
-      invoiceNo,
-      invoiceDate,
-      terms,
-      items,
-      subTotal,
-      taxTotal,
-      total,
-    };
+    const formData = { from, to, invoiceNo, invoiceDate, terms, items };
     console.log(formData);
     sendData(formData);
   };
+
+  //Modify output for subtotal amount
+  let subTotal = 0;
+  items.forEach((item) => (subTotal += Number(item.amount)));
+
+  //Modify output for taxTotal amount
+  let taxTotal = 0;
+  items.forEach((item) => (subTotal += Number(item.amount)));
+
+  //Modify output for total amount
+  let total = 0;
+  items.forEach((item) => (subTotal += Number(item.amount)));
 
   return (
     <>

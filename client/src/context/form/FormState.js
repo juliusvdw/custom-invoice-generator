@@ -19,9 +19,6 @@ const FormState = (props) => {
     loading: false,
     items: [{ description: "", amount: null, tax: null, id: uuidv4() }],
     activeTaxID: null,
-    subTotal: 0,
-    total: 0,
-    taxTotal: 0,
   };
 
   const [state, dispatch] = useReducer(FormReducer, initialState);
@@ -29,11 +26,6 @@ const FormState = (props) => {
   //Send formData to the server
   const sendData = async (formData) => {
     //Turn data into HTML template
-
-    //Calculate totals
-    calculateTotals();
-
-    console.log(formData);
 
     try {
       console.log("Convert call requested");
@@ -101,29 +93,27 @@ const FormState = (props) => {
   };
 
   //Calculate total on form submission
-  const calculateTotals = () => {
-    let total = 0,
-      subTotal = 0,
-      taxTotal = 0;
+  // const calculateTotals = async () => {
+  //   let total = 0,
+  //     subTotal = 0,
+  //     taxTotal = 0;
 
-    state.items.forEach((item) => {
-      subTotal += Number(item.amount);
-      taxTotal += Number(item.amount * Number(item.tax / 100));
-    });
+  //   state.items.forEach((item) => {
+  //     subTotal += Number(item.amount);
+  //     taxTotal += Number(item.amount * Number(item.tax / 100));
+  //   });
 
-    total = subTotal + taxTotal;
-    dispatch({ type: SET_TOTAL, payload: { subTotal, taxTotal, total } });
+  //   total = subTotal + taxTotal;
+  //   await dispatch({ type: SET_TOTAL, payload: { subTotal, taxTotal, total } });
 
-    console.log("Subtotal", subTotal, "total", total, "tax total", taxTotal);
-  };
+  //   console.log("Subtotal", subTotal, "total", total, "tax total", taxTotal);
+  // };
 
   return (
     <FormContext.Provider
       value={{
         items: state.items,
-        subTotal: state.subTotal,
-        total: state.total,
-        taxTotal: state.taxTotal,
+
         activeTaxID: state.activeTaxID,
         sendData,
         modifyItem,
@@ -131,7 +121,6 @@ const FormState = (props) => {
         removeItem,
         addTaxID,
         addTax,
-        calculateTotals,
       }}
     >
       {props.children}
