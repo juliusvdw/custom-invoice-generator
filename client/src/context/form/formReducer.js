@@ -41,6 +41,7 @@ export default (state, action) => {
     case SET_TOTAL:
       return {
         ...state,
+        subTotal: action.payload.subTotal,
         total: action.payload.total,
         taxTotal: action.payload.taxTotal,
       };

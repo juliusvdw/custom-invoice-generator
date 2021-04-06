@@ -19,6 +19,7 @@ const FormState = (props) => {
     loading: false,
     items: [{ description: "", amount: null, tax: null, id: uuidv4() }],
     activeTaxID: null,
+    subTotal: 0,
     total: 0,
     taxTotal: 0,
   };
@@ -99,15 +100,18 @@ const FormState = (props) => {
   //Calculate total on form submission
   const calculateTotals = () => {
     let total = 0,
+      subTotal = 0,
       taxTotal = 0;
 
     state.items.forEach((item) => {
-      total += Number(item.amount);
+      subTotal += Number(item.amount);
       taxTotal += Number(item.amount * Number(item.tax / 100));
-      dispatch({ type: SET_TOTAL, payload: { total, taxTotal } });
     });
 
-    console.log(total, taxTotal);
+    total = subTotal + taxTotal;
+    dispatch({ type: SET_TOTAL, payload: { subTotal, taxTotal, total } });
+
+    console.log("Subtotal", subTotal, "total", total, "tax total", taxTotal);
   };
 
   return (
