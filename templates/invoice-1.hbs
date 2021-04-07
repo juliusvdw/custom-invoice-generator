@@ -2,9 +2,7 @@
     body {
         box-sizing: border-box;
         padding: 70px;
-        white-space: pre-line;
 
-        white-space: pre-wrap;
 
     }
 
@@ -14,6 +12,9 @@
 
     .address-container p {
         margin: 2px;
+        white-space: pre-line;
+
+        white-space: pre-wrap;
     }
 
     .invoice-details {
@@ -22,6 +23,9 @@
 
     .bill-to p {
         margin: 2px;
+        white-space: pre-line;
+
+        white-space: pre-wrap;
     }
 
     .bill-to {
@@ -89,6 +93,12 @@
         margin-top: 30px
     }
 
+    .from {
+        white-space: pre-line;
+
+        white-space: pre-wrap;
+    }
+
     .row-content {
         margin-left: auto;
         display: flex;
@@ -138,31 +148,29 @@
 <html>
 
 <body>
-    <h2>{{from}}</h2>
+    <h2 class='from'>{{from}}</h2>
     <div class="address-container">
-        <p>42 Barber Street</p>
-        <p>Cape Town</p>
-        <p>South Africa</p>
+        <p></p>
+
     </div>
 
     <div class="invoice-details">
         <div class="bill-to">
             <h4>Bill To</h4>
-            <p>Vivian Jones</p>
-            <p>37 Hermanus street</p>
-            <p>Cape Town, South Africa</p>
+            <p>{{to}}</p>
+
         </div>
         <div class="invoice-information">
             <div class="info-left">
                 <h4>Invoice #</h4>
                 <h4>Invoice Date</h4>
-                <h4>Due Date</h4>
+
             </div>
 
             <div class="info-right">
-                <p>221014</p>
-                <p>23/08/1994</p>
-                <p>23/08/1994</p>
+                <p>{{invoiceNo}}</p>
+                <p>{{invoiceDate}}</p>
+
             </div>
         </div>
     </div>
@@ -170,36 +178,27 @@
     <div class="items-table-container">
         <table class="table">
             <tr>
-                <th class='quantity-col'>QTY</th>
+
                 <th class="description-col">Description</th>
                 <th class='price-col'>Unit Price</th>
                 <th class='amount-col'>Amount</th>
             </tr>
 
+
+            {{#each items}}
             <tr>
-                <td class='quantity-col'>1</td>
-                <td class="description-col">Zeal Hydro vertical hydroponic system</td>
-                <td class='price-col'>2900</td>
-                <td class='amount-col'>2900</td>
+
+                <td class="description-col">{{description}}</td>
+                <td class='price-col'>{{amount}}</td>
+                <td class='amount-col'>{{amount}}</td>
+
+
 
 
             </tr>
-
-            <tr>
-                <td class='quantity-col'>1</td>
-                <td class="description-col">Zeal Hydro side pipes</td>
-                <td class='price-col'>250</td>
-                <td class='amount-col'>250</td>
+            {{/each}}
 
 
-            </tr>
-
-            <tr>
-                <td class='quantity-col'>3</td>
-                <td class="description-col">Zeal Hydro Net Pots</td>
-                <td class='price-col'>400</td>
-                <td class='amount-col'>400</td>
-            </tr>
 
 
 
@@ -212,27 +211,31 @@
                 <strong>Subtotal</strong>
             </div>
             <div class='subtotal-price'>
-                R3499.00
+                R {{subTotal}}
             </div>
         </div>
     </div>
+    {{#if taxTotal}}
     <div class='row tax-row'>
         <div class='row-content'>
             <div class='tax-heading'>
-                <strong>Vat 15%</strong>
+                <strong>Tax
+
+                </strong>
             </div>
             <div class='tax-price'>
-                R450.00
+                {{taxTotal}}
             </div>
         </div>
     </div>
+    {{/if}}
     <div class='row total-row'>
         <div class='row-content'>
             <div class='total-heading'>
-                <strong>Subtotal</strong>
+                <strong>Total</strong>
             </div>
             <div class='total-price'>
-                3900.00
+                R {{total}}
             </div>
         </div>
     </div>
@@ -240,10 +243,7 @@
     <div class='terms-container'>
         <h4>Terms and conditions</h4>
 
-        <p>Payment due within 14 days of purchase</p>
-        <p>Branch: FNB</p>
-        <p>Acc no: 0120 5105 5105</p>
-        <p>Acc holder: M van der westhuizen </p>
+        <p>{{terms}}</p>
     </div>
 
 </body>
