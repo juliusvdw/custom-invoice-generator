@@ -30,9 +30,9 @@ const Form = () => {
       invoiceDate,
       terms,
       items,
-      total,
-      taxTotal,
-      subTotal,
+      total: total.toFixed(2),
+      taxTotal: taxTotal.toFixed(2),
+      subTotal: subTotal.toFixed(2),
     };
     console.log(formData);
     sendData(formData);
@@ -49,7 +49,8 @@ const Form = () => {
   );
 
   //Modify output for total amount
-  let total = subTotal + taxTotal;
+  let total = Number(subTotal + taxTotal);
+
   return (
     <>
       <form>
@@ -141,7 +142,7 @@ const Form = () => {
                 </h5>
                 <span className="ml-auto">
                   {" "}
-                  <strong>{subTotal}</strong>
+                  <strong>{subTotal.toFixed(2)}</strong>
                 </span>
               </div>
               {taxTotal > 0 && (
@@ -151,7 +152,7 @@ const Form = () => {
                   </h5>
                   <span className="ml-auto">
                     {" "}
-                    <strong>{taxTotal}</strong>
+                    <strong>{taxTotal.toFixed(2)}</strong>
                   </span>
                 </div>
               )}
@@ -160,7 +161,7 @@ const Form = () => {
                   <strong> TOTAL </strong> <a href="#">ZAR</a>
                 </h4>
                 <span className="ml-auto">
-                  <strong>{total}</strong>
+                  <strong>{total.toFixed(2)}</strong>
                 </span>
               </div>
             </div>
