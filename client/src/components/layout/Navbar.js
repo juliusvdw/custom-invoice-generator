@@ -17,10 +17,14 @@ const Navbar = () => {
       className={
         window.location.pathname === "/pdf" ? "navbar" : "navbar fixed-top"
       }
-      style={{ height: "70px" }}
+      style={{
+        height: "70px",
+        borderBottom: "1px solid rgb(220,220,220) ",
+        paddingBottom: "70px",
+      }}
     >
       <p className="navbar-brand " href="#" style={logoStyle}>
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
           {" "}
           <span>easy</span>invoice{" "}
         </Link>
@@ -30,7 +34,7 @@ const Navbar = () => {
         <li className="nav-item active">
           {window.location.pathname === "/" && (
             <Link to="/pdf" className="nav-link" href="#">
-              <button className="btn btn-warning">
+              <button className="btn btn-primary" style={btnStyle}>
                 <strong>Create Invoice</strong>
               </button>
             </Link>
@@ -50,6 +54,10 @@ const navListStyle = {
 const logoStyle = {
   paddingLeft: "5%",
   fontSize: "2rem",
+};
+
+const btnStyle = {
+  backgroundColor: "white !important",
 };
 
 export default Navbar;
