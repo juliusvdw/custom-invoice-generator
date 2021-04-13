@@ -73,10 +73,7 @@ const Form = () => {
               />
             </div>
             <div className="col-lg-3 col-md-3 col-sm-3 offset-lg-1">
-              <div
-                className="jumbotron bg-warning mt-4 py-0 px-0"
-                style={logoStyle}
-              >
+              <div className="jumbotron  mt-4 py-0 px-0" style={logoStyle}>
                 <h6 style={{ paddingTop: "35px" }}>Your Logo Here</h6>
               </div>
             </div>
@@ -126,7 +123,7 @@ const Form = () => {
           <Item />
 
           <div
-            className="btn btn-warning form-control mt-3"
+            className="btn btn-outline-primary form-control mt-3 w-90"
             onClick={() => addItem()}
           >
             Add New Item
@@ -187,7 +184,7 @@ const Form = () => {
         </div>
         <button
           type="submit"
-          className="btn btn-warning form-control mt-3 mb-4"
+          className="btn btn-success form-control mt-3 mb-4"
           style={{ minHeight: "50px" }}
           onClick={onSubmit}
         >
@@ -203,9 +200,10 @@ const Form = () => {
 const jumboStyle = {
   minHeight: "60vh",
   marginTop: "3%",
-  backgroundColor: "#D2E7F4",
+  backgroundColor: "#FFF",
   padding: "25px",
   marginBottom: "5px",
+  border: "1px solid rgb(200,200,200)",
 };
 
 const textAreaStyle = {
@@ -220,7 +218,7 @@ const descriptionStyle = {
 
 const logoStyle = {
   height: "120px",
-
+  backgroundColor: "#eeee",
   borderRadius: "7px",
 };
 

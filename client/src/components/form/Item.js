@@ -60,7 +60,7 @@ const Item = () => {
             </h6>
             {item.tax === null ? (
               <div
-                className="btn btn-warning  mt-2 form-control"
+                className="btn btn-outline-primary  mt-2 form-control"
                 onClick={() => handleTaxModal(item)}
               >
                 Add Tax

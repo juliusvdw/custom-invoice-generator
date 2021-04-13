@@ -34,7 +34,7 @@ const Navbar = () => {
         <li className="nav-item active">
           {window.location.pathname === "/" && (
             <Link to="/pdf" className="nav-link" href="#">
-              <button className="btn btn-primary" style={btnStyle}>
+              <button className="btn btn-outline-primary" style={btnStyle}>
                 <strong>Create Invoice</strong>
               </button>
             </Link>

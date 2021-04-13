@@ -45,7 +45,7 @@ const imageStyle = {
 };
 
 const headingStyle = {
-  color: "#1c7ff2",
+  colr: "#1c7ff2",
   fontSize: "4.5rem",
 };
 
