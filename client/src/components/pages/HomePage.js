@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Navbar from "../layout/Navbar";
+import Form from "../form/Form";
 
 const HomePage = () => {
   return (
@@ -30,6 +31,21 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-10 mx-auto text-center">
+            <h2 style={formHeadingStyle}>
+              <i className="fas fa-plus-circle pr-3"></i> New Invoice
+            </h2>
+          </div>
+        </div>
+
+        <div className="row ">
+          <div className="col-lg-10 mx-auto">
+            <Form />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
@@ -45,7 +61,6 @@ const imageStyle = {
 };
 
 const headingStyle = {
-  colr: "#1c7ff2",
   fontSize: "4.5rem",
 };
 
@@ -64,6 +79,10 @@ const btnStyle = {
 const containerStyle = {
   paddingTop: "30vh",
   maxWidth: "900px",
+};
+
+const formHeadingStyle = {
+  marginTop: "4%",
 };
 
 export default HomePage;
