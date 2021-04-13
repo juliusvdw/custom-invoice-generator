@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 import Navbar from "../layout/Navbar";
 import Form from "../form/Form";
@@ -19,7 +19,7 @@ const HomePage = () => {
                 Select one of our templates and create a stunning invoice within
                 a matter of minutes. For free.
               </p>
-              <Link to="/pdf">
+              <Link to="form-container" smooth={true} duration={1000}>
                 <btn
                   className="btn btn-outline-primary  btn-lg mt-4  "
                   style={btnStyle}
@@ -31,7 +31,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container" id="form-container">
         <div className="row">
           <div className="col-lg-10 mx-auto text-center">
             <h2 style={formHeadingStyle}>
