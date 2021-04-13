@@ -21,6 +21,7 @@ const Navbar = () => {
         height: "70px",
         borderBottom: "1px solid rgb(220,220,220) ",
         paddingBottom: "70px",
+        backgroundColor: "white",
       }}
     >
       <p className="navbar-brand " href="#" style={logoStyle}>
