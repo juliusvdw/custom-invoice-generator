@@ -14,9 +14,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={
-        window.location.pathname === "/pdf" ? "navbar" : "navbar fixed-top"
-      }
+      className="navbar"
       style={{
         height: "70px",
         borderBottom: "1px solid rgb(220,220,220) ",
