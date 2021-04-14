@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 
 import Navbar from "../layout/Navbar";
 import Form from "../form/Form";
+import TemplateSection from "../templates/TemplatesSection";
 
 const HomePage = () => {
   return (
@@ -82,7 +83,7 @@ const containerStyle = {
 };
 
 const formHeadingStyle = {
-  marginTop: "4%",
+  marginTop: "10%",
 };
 
 export default HomePage;
