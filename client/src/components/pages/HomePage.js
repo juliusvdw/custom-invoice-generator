@@ -10,7 +10,7 @@ const HomePage = () => {
     <>
       <Navbar />
       <div id="home">
-        <div className="container " style={{ height: "100vh" }}>
+        <div className="container " style={{ height: "90vh" }}>
           <div className=" text-center " id="main-left">
             <div className="container-fluid h-100" style={containerStyle}>
               <h2 className="heading" style={headingStyle}>
@@ -87,7 +87,7 @@ const btnStyle = {
 };
 
 const containerStyle = {
-  paddingTop: "30vh",
+  paddingTop: "20vh",
   maxWidth: "900px",
 };
 
@@ -97,6 +97,7 @@ const formHeadingStyle = {
 
 const templatesContainerStyle = {
   height: "600px",
+  paddingTop: "50px",
 };
 
 export default HomePage;
