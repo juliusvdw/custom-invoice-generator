@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 import Navbar from "../layout/Navbar";
 import Form from "../form/Form";
-import TemplateSection from "../templates/TemplatesSection";
+import TemplatesSection from "../templates/TemplatesSection";
 
 const HomePage = () => {
   return (
@@ -20,7 +20,7 @@ const HomePage = () => {
                 Select one of our templates and create a stunning invoice within
                 a matter of minutes. For free.
               </p>
-              <Link to="form-container" smooth={true} duration={1000}>
+              <Link to="templates-section" smooth={true} duration={800}>
                 <btn
                   className="btn btn-outline-primary  btn-lg mt-4  "
                   style={btnStyle}
@@ -32,6 +32,15 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+
+      <div
+        className="container"
+        id="templates-section"
+        style={templatesContainerStyle}
+      >
+        <TemplatesSection />
+      </div>
+
       <div className="container" id="form-container">
         <div className="row">
           <div className="col-lg-10 mx-auto text-center">
@@ -84,6 +93,10 @@ const containerStyle = {
 
 const formHeadingStyle = {
   marginTop: "10%",
+};
+
+const templatesContainerStyle = {
+  height: "600px",
 };
 
 export default HomePage;

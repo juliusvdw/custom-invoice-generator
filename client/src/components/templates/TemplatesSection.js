@@ -1,7 +1,7 @@
 import React from "react";
 
 const templateSection = () => {
-  return <h1>Testing</h1>;
+  return <h2>Choose a template</h2>;
 };
 
 export default templateSection;
