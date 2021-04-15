@@ -22,3 +22,12 @@ body {
 .delete:hover {
   cursor: pointer;
 }
+
+.template-image-container {
+  transition: 0.5s;
+}
+
+.template-image-container:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
