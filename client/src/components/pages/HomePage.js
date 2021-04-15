@@ -41,7 +41,7 @@ const HomePage = () => {
         <TemplatesSection />
       </div>
 
-      <div className="container" id="form-container">
+      <div className="container" id="form-section">
         <div className="row">
           <div className="col-lg-10 mx-auto text-center">
             <h2 style={formHeadingStyle}>
@@ -50,10 +50,8 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="row ">
-          <div className="col-lg-10 mx-auto">
-            <Form />
-          </div>
+        <div className="col-lg-10 mx-auto">
+          <Form />
         </div>
       </div>
     </>
@@ -92,11 +90,11 @@ const containerStyle = {
 };
 
 const formHeadingStyle = {
-  marginTop: "10%",
+  paddingTop: "50px",
 };
 
 const templatesContainerStyle = {
-  height: "600px",
+  height: "720px",
   paddingTop: "50px",
 };
 
