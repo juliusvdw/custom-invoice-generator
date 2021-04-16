@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import Template from "./Template";
 
 const templateSection = () => {
   return (
@@ -10,30 +11,9 @@ const templateSection = () => {
         style={templatesContainerStyle}
       >
         <div className="row">
-          <Link to="form-section" smooth={true} duration={800}>
-            <div className="col-lg-4">
-              <div className="template-image-container" style={imageStyle}>
-                {" "}
-                <img className="img-fluid" src="invoicetest.png"></img>
-              </div>
-            </div>
-          </Link>
-          <Link to="form-section" smooth={true} duration={800}>
-            <div className="col-lg-4">
-              <div className="template-image-container" style={imageStyle}>
-                {" "}
-                <img className="img-fluid" src="invoicetest2.png"></img>
-              </div>
-            </div>
-          </Link>
-          <Link to="form-section" smooth={true} duration={800}>
-            <div className="col-lg-4">
-              <div className="template-image-container" style={imageStyle}>
-                {" "}
-                <img className="img-fluid" src="invoicetest3.png"></img>
-              </div>
-            </div>
-          </Link>
+          <Template src={"invoicetest.png"} />
+          <Template src={"invoicetest2.png"} />
+          <Template src={"invoicetest3.png"} />
         </div>
       </div>
     </>
