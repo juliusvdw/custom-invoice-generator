@@ -11,9 +11,9 @@ const templateSection = () => {
         style={templatesContainerStyle}
       >
         <div className="row">
-          <Template src={"invoicetest.png"} />
-          <Template src={"invoicetest2.png"} />
-          <Template src={"invoicetest3.png"} />
+          <Template src={"invoicetest.png"} id={"invoice1"} />
+          <Template src={"invoicetest2.png"} id={"invoice2"} />
+          <Template src={"invoicetest3.png"} id={"invoice3"} />
         </div>
       </div>
     </>
