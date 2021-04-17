@@ -36,14 +36,14 @@ const imageStyle = {
   width: "350px",
   height: "500px",
   border: "1px solid rgb(210,210,210)",
-  borderRadius: "15px",
+  borderRadius: "5px",
 };
 
 const selectedImageStyle = {
   width: "350px",
   height: "500px",
-  border: "1px solid blue",
-  borderRadius: "15px",
+  border: "1px solid #0275d8",
+  borderRadius: "5px",
 };
 
 export default Template;
