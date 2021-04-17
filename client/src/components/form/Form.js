@@ -13,15 +13,16 @@ const Form = () => {
   const [invoiceNo, setInvoiceNo] = useState("");
   const [invoiceDate, setInvoiceDate] = useState("");
   const [terms, setTerms] = useState("");
+  const [downloading, setDownloading] = useState(false);
 
   const formContext = useContext(FormContext);
 
   const { sendData, addItem, items } = formContext;
 
   //Send form data to server for pdf generation
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-
+    setDownloading(true);
     //Create formData object to be sent to server
     const formData = {
       from,
@@ -35,7 +36,9 @@ const Form = () => {
       subTotal: subTotal.toFixed(2),
     };
     console.log(formData);
-    sendData(formData);
+    await sendData(formData);
+
+    setDownloading(false);
   };
 
   //Modify output for subtotal amount
@@ -188,7 +191,13 @@ const Form = () => {
           style={{ minHeight: "50px" }}
           onClick={onSubmit}
         >
-          Download invoice PDF
+          {downloading ? (
+            <div className="spinner-border text-dark" role="status">
+              <span className="sr-only">Loading...</span>
+            </div>
+          ) : (
+            <span>Download PDF</span>
+          )}
         </button>
       </form>
     </>
@@ -200,7 +209,7 @@ const Form = () => {
 const jumboStyle = {
   minHeight: "60vh",
   marginTop: "3%",
-  backgroundColor: "#FFF",
+  backgroundColor: "rgb(250,250,250)",
   padding: "25px",
   marginBottom: "5px",
   border: "1px solid rgb(200,200,200)",

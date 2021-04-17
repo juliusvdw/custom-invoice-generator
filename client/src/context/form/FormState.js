@@ -29,7 +29,6 @@ const FormState = (props) => {
     //Turn data into HTML template
 
     try {
-      console.log("Convert call requested");
       const invoice = await axios("/convert", {
         method: "POST",
         responseType: "blob",
