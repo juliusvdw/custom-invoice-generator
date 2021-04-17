@@ -1,9 +1,7 @@
-import { React } from "react";
+import React from "react";
 import { Link } from "react-scroll";
 
 const template = ({ src }) => {
-  
-
   return (
     <Link to="form-section" smooth={true} duration={800}>
       <div className="col-lg-4">
