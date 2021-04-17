@@ -7,6 +7,7 @@ import {
   REMOVE_ITEM,
   ADD_TAX_ID,
   ADD_TAX,
+  SELECT_TEMPLATE,
 } from "../Types";
 
 import FormContext from "./formContext";
@@ -91,11 +92,15 @@ const FormState = (props) => {
     dispatch({ type: ADD_TAX, payload: { id, data } });
   };
 
+  //Select template
+  const selectTemplate = (id) => {
+    dispatch({ type: SELECT_TEMPLATE, payload: id });
+  };
+
   return (
     <FormContext.Provider
       value={{
         items: state.items,
-
         activeTaxID: state.activeTaxID,
         sendData,
         modifyItem,
@@ -103,6 +108,7 @@ const FormState = (props) => {
         removeItem,
         addTaxID,
         addTax,
+        selectTemplate,
       }}
     >
       {props.children}
