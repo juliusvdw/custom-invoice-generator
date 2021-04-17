@@ -3,6 +3,11 @@ import { Link } from "react-scroll";
 import Template from "./Template";
 
 const templateSection = () => {
+  // Handle select template
+  // const selectTemplate = (id) => {
+  //   setSelected(id);
+  // };
+
   return (
     <>
       <h2>Choose a template</h2>
@@ -11,9 +16,21 @@ const templateSection = () => {
         style={templatesContainerStyle}
       >
         <div className="row">
-          <Template src={"invoicetest.png"} id={"invoice1"} />
-          <Template src={"invoicetest2.png"} id={"invoice2"} />
-          <Template src={"invoicetest3.png"} id={"invoice3"} />
+          <Template
+            src={"invoicetest.png"}
+            id={"invoice1"}
+            onClick={selectTemplate("invoice1")}
+          />
+          <Template
+            src={"invoicetest2.png"}
+            id={"invoice2"}
+            onClick={selectTemplate("invoice2")}
+          />
+          <Template
+            src={"invoicetest3.png"}
+            id={"invoice3"}
+            onClick={selectTemplate("invoice3")}
+          />
         </div>
       </div>
     </>
