@@ -3,10 +3,12 @@ import { Link } from "react-scroll";
 import Template from "./Template";
 
 const templateSection = () => {
-  // Handle select template
-  // const selectTemplate = (id) => {
-  //   setSelected(id);
-  // };
+  const [selected, setSelected] = useState("");
+
+  //Handle select template
+  const selectTemplate = (id) => {
+    setSelected(id);
+  };
 
   return (
     <>
