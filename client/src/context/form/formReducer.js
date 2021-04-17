@@ -5,6 +5,7 @@ import {
   ADD_TAX_ID,
   ADD_TAX,
   SET_TOTAL,
+  SELECT_TEMPLATE,
 } from "../Types";
 
 export default (state, action) => {
@@ -38,7 +39,12 @@ export default (state, action) => {
           item.id === action.payload.id ? action.payload.data : item
         ),
       };
-    
+    case SELECT_TEMPLATE:
+      return {
+        ...state,
+        selectedTemplate: action.payload,
+      };
+
     default:
       return state;
   }
