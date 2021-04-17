@@ -19,6 +19,7 @@ const FormState = (props) => {
     loading: false,
     items: [{ description: "", amount: null, tax: null, id: uuidv4() }],
     activeTaxID: null,
+    selectedTemplate: null,
   };
 
   const [state, dispatch] = useReducer(FormReducer, initialState);
@@ -102,6 +103,7 @@ const FormState = (props) => {
       value={{
         items: state.items,
         activeTaxID: state.activeTaxID,
+        selectedTemplate: state.selectedTemplate,
         sendData,
         modifyItem,
         addItem,
