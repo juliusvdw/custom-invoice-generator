@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
+import FormContext from "../../context/form/formContext";
 import { Link } from "react-scroll";
 
-const template = ({ src }) => {
+const Template = ({ src, id }) => {
+  //Access form context
+  const formContext = useContext(FormContext);
+  //Destructure what is needed from formcontext
+  const { selectedTemplate, selectTemplate } = formContext;
+
+  //Handle select template
+  const handleSelect = (id) => {
+    selectTemplate(id);
+  };
+
   return (
     <Link to="form-section" smooth={true} duration={800}>
-      <div className="col-lg-4">
-        <div className="template-image-container" style={imageStyle}>
+      <div className="col-lg-4" onClick={() => handleSelect(id)}>
+        <div
+          className="template-image-container"
+          style={selectedTemplate === id ? selectedImageStyle : imageStyle}
+        >
           {" "}
-          <img className="img-fluid" src={src}></img>
+          <img
+            className="img-fluid"
+            src={src}
+            style={{ maxHeight: "100%" }}
+          ></img>
         </div>
       </div>
     </Link>
@@ -21,4 +39,11 @@ const imageStyle = {
   borderRadius: "15px",
 };
 
-export default template;
+const selectedImageStyle = {
+  width: "350px",
+  height: "500px",
+  border: "1px solid blue",
+  borderRadius: "15px",
+};
+
+export default Template;
