@@ -14,12 +14,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className="navbar"
+      className="navbar navbar-expand-lg"
       style={{
-        height: "70px",
-        borderBottom: "1px solid rgb(220,220,220) ",
-        paddingBottom: "70px",
-        backgroundColor: "white",
+        
       }}
     >
       <p className="navbar-brand " href="#" style={logoStyle}>
@@ -28,19 +25,24 @@ const Navbar = () => {
           <span>easy</span>invoice{" "}
         </Link>
       </p>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto" >
+      <li class="nav-item active" style = {navItemStyle}>
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item" style = {navItemStyle}>
+        <a class="nav-link" href="#">Features</a>
+      </li>
+    </ul>
 
-      <ul className="navbar-nav ml-auto d-none d-md-block" style={navListStyle}>
-        <li className="nav-item active">
-          {window.location.pathname === "/" && (
-            <Link to="/pdf" className="nav-link" href="#">
-              <button className="btn btn-outline-primary" style={btnStyle}>
-                <strong>Create Invoice</strong>
-              </button>
-            </Link>
-          )}
-        </li>
-      </ul>
-    </nav>
+    <btn className = 'btn btn-lg btn-primary btn-custom-small-outline mr-3'>Sign In</btn>
+    <btn className = 'btn btn-lg btn-primary btn-custom-small mr-4'>Create Invoice</btn>
+    
+  </div>
+</nav>
   );
 };
 
@@ -50,13 +52,16 @@ const navListStyle = {
   paddingRight: "5%",
 };
 
+const navItemStyle = {
+  marginRight:'40px',
+}
+
 const logoStyle = {
   paddingLeft: "5%",
   fontSize: "2rem",
 };
 
 const btnStyle = {
-  backgroundColor: "white !important",
 };
 
 export default Navbar;
