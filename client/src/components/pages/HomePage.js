@@ -29,8 +29,19 @@ const HomePage = () => {
               </Link>
             </div>
           </div>
-        </div>
+
+          <div className = '' style = {imageContainerStyle}>
+        <img src = '/invoice.svg' style = {heroImageStyle}/>
+
       </div>
+
+        </div>
+
+        
+
+      </div>
+
+      
 
       <div
         className="container"
@@ -87,7 +98,7 @@ const btnStyle = {
 };
 
 const containerStyle = {
-  paddingTop: "10vh",
+  paddingTop: "5vh",
   maxWidth: "900px",
 };
 
@@ -99,5 +110,16 @@ const templatesContainerStyle = {
   height: "720px",
   paddingTop: "50px",
 };
+
+const imageContainerStyle = {
+
+}
+
+const heroImageStyle = {
+  position :'absolute',
+  marginLeft:'-60px',
+  marginTop:'-130px',
+  zIndex:'-9'
+}
 
 export default HomePage;
