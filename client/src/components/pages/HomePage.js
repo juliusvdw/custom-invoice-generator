@@ -13,19 +13,18 @@ const HomePage = () => {
         <div className="container " style={{ height: "90vh" }}>
           <div className=" text-center " id="main-left">
             <div className="container-fluid h-100" style={containerStyle}>
-              <h2 className="heading" style={headingStyle}>
-                <strong> Create elegant invoices within minutes </strong>
-              </h2>
+              <h1 className="heading" style={headingStyle}>
+                Create Elegant Invoices Within Minutes              </h1>
               <p style={pStyle} className="mt-3 mx-auto">
-                Select one of our templates and create a stunning invoice within
-                a matter of minutes. For free.
+                Select one of our templates and create a proffesional invoice within
+                a matter of minutes. Quick, easy and free.
               </p>
               <Link to="templates-section" smooth={true} duration={800}>
                 <btn
-                  className="btn btn-outline-primary  btn-lg mt-4  "
+                  className="btn btn-primary  btn-lg mt-4  btn-custom"
                   style={btnStyle}
                 >
-                  Create Invoice
+                  <strong>Create A Free Invoice</strong>
                 </btn>
               </Link>
             </div>
@@ -69,23 +68,26 @@ const imageStyle = {
 };
 
 const headingStyle = {
-  fontSize: "4.5rem",
+  fontSize: '74px',
+  fontWeight:'bold'
 };
 
 const pStyle = {
-  fontSize: "1.5rem",
+  fontSize: "20px",
   width: "80%",
   textAlign: "center",
+  color:'#394550'
 };
 
 const btnStyle = {
   borderWidth: "1.5px",
   minHeight: "50px",
-  width: "35%",
+  width: "300px",
+  backgroundColor:'#2F2FA1 !important'
 };
 
 const containerStyle = {
-  paddingTop: "20vh",
+  paddingTop: "10vh",
   maxWidth: "900px",
 };
 
