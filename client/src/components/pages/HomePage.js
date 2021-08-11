@@ -51,17 +51,21 @@ const HomePage = () => {
         <TemplatesSection />
       </div>
 
-      <div className="container" id="form-section">
-        <div className="row">
-          <div className="col-lg-10 mx-auto text-center">
-            <h2 style={formHeadingStyle}>
-              <i className="fas fa-plus-circle pr-3"></i> New Invoice
-            </h2>
-          </div>
+      <div className="container-fluid" id="form-section" style = {formSectionStyle}>
+        
+
+        <div className = 'row'>
+
+        
+
+        <div className="col-lg-8 offset-md-1 ">
+          <Form />
         </div>
 
-        <div className="col-lg-10 mx-auto">
-          <Form />
+        <div className = 'col-lg-3' id = 'form-side-bar'>
+
+        </div>
+
         </div>
       </div>
     </>
@@ -117,9 +121,13 @@ const imageContainerStyle = {
 
 const heroImageStyle = {
   position :'absolute',
-  marginLeft:'-60px',
-  marginTop:'-130px',
+  marginLeft:'-70px',
+  marginTop:'-120px',
   zIndex:'-9'
+}
+
+const formSectionStyle = {
+  backgroundColor:'#f2f2f2'
 }
 
 export default HomePage;
