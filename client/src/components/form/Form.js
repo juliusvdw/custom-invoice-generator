@@ -209,10 +209,11 @@ const Form = () => {
 const jumboStyle = {
   minHeight: "60vh",
   marginTop: "3%",
-  backgroundColor: "rgb(250,250,250)",
+  backgroundColor: "#FFFFFF",
   padding: "25px",
   marginBottom: "5px",
-  border: "1px solid rgb(200,200,200)",
+  border: "0px solid rgb(200,200,200)",
+  borderRadius:'15px'
 };
 
 const textAreaStyle = {
