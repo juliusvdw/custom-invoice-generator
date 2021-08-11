@@ -185,20 +185,7 @@ const Form = () => {
             </div>
           </div>
         </div>
-        <button
-          type="submit"
-          className="btn btn-success form-control mt-3 mb-4"
-          style={{ minHeight: "50px" }}
-          onClick={onSubmit}
-        >
-          {downloading ? (
-            <div className="spinner-border text-dark" role="status">
-              <span className="sr-only">Loading...</span>
-            </div>
-          ) : (
-            <span>Download PDF</span>
-          )}
-        </button>
+        
       </form>
     </>
   );
@@ -209,10 +196,10 @@ const Form = () => {
 const jumboStyle = {
   minHeight: "60vh",
   marginTop: "3%",
-  backgroundColor: "#FFFFFF",
+  backgroundColor: "rgb(250,250,250)",
   padding: "25px",
   marginBottom: "5px",
-  border: "0px solid rgb(200,200,200)",
+  border: "1px solid rgb(225,225,225)",
   borderRadius:'15px'
 };
 
@@ -237,3 +224,19 @@ const borderStyle = {
 };
 
 export default Form;
+
+
+{/* <button */}
+        //   type="submit"
+        //   className="btn btn-success form-control mt-3 mb-4"
+        //   style={{ minHeight: "50px" }}
+        //   onClick={onSubmit}
+        // >
+        //   {downloading ? (
+        //     <div className="spinner-border text-dark" role="status">
+        //       <span className="sr-only">Loading...</span>
+        //     </div>
+        //   ) : (
+        //     <span>Download PDF</span>
+        //   )}
+        // </button>
