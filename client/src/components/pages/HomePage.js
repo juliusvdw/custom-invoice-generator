@@ -58,16 +58,11 @@ const HomePage = () => {
 
         
 
-        <div className="col-lg-8 offset-md-1 " style = {formColStyle}>
+        <div className="col-lg-12 offset-md-1 " style = {formColStyle}>
           <Form />
         </div>
 
-        <div className = 'col-lg-3' style = {sideBarColStyle}>
-          <div id = 'form-side-bar'>
-          <button className = 'btn btn-primary  form-control ' style = {downloadStyle}>Download Invoice</button>
-          
-          </div>
-        </div>
+        
 
         </div>
       </div>
@@ -133,13 +128,6 @@ const formSectionStyle = {
   backgroundColor:'#ffffff'
 }
 
-const downloadStyle = {
-  height:'45px',
-  display:'flex',
-  justifyContent:'center',
-  alignItems:'center',
-  marginTop:'35px'
-}
 
 const formColStyle = { 
   
