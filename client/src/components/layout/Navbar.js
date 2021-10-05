@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+
 
 const Navbar = () => {
   useEffect(() => {
@@ -38,7 +40,7 @@ const Navbar = () => {
       </li>
     </ul>
 
-    <btn className = 'btn btn-lg btn-primary btn-custom-small mr-4'>Create Invoice</btn>
+   <ScrollLink to = 'templates-section' smooth={true} duration={800}><btn className = 'btn btn-lg btn-primary btn-custom-small mr-4'>Create Invoice</btn></ScrollLink>
     
   </div>
 </nav>
