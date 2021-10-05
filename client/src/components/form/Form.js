@@ -57,6 +57,11 @@ const Form = () => {
   return (
     <>
       <form>
+
+        <div className = 'row '>
+        <div className = 'col-lg-8'>
+
+        
         <div className="jumbotron " style={jumboStyle}>
           <div className="row">
             <div className="col-lg-8 col-md-8 col-sm-8 text-left">
@@ -185,6 +190,12 @@ const Form = () => {
             </div>
           </div>
         </div>
+        </div>
+
+        <div className = 'col-lg-3' id = 'form-side-menu' style = {sideMenuStyle}>
+          <btn className = 'btn btn-primary form-control' style = {downloadStyle}>Download</btn>
+        </div>
+        </div>
         
       </form>
     </>
@@ -222,6 +233,18 @@ const logoStyle = {
 const borderStyle = {
   borderRadius: "7px",
 };
+
+const sideMenuStyle = {
+  marginTop:'3%'
+}
+
+const downloadStyle = {
+  height:'45px',
+  display:'flex',
+  justifyContent:'center',
+  alignItems:'center',
+  
+}
 
 export default Form;
 
