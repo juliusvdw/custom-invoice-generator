@@ -38,7 +38,6 @@ const Navbar = () => {
       </li>
     </ul>
 
-    <btn className = 'btn btn-lg btn-primary btn-custom-small-outline mr-3'>Sign In</btn>
     <btn className = 'btn btn-lg btn-primary btn-custom-small mr-4'>Create Invoice</btn>
     
   </div>
