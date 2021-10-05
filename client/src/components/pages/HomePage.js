@@ -119,8 +119,8 @@ const imageContainerStyle = {
 
 const heroImageStyle = {
   position :'absolute',
-  marginLeft:'-70px',
-  marginTop:'-120px',
+  marginLeft:'-370px',
+  marginTop:'-60px',
   zIndex:'-9'
 }
 
