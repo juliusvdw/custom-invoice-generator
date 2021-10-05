@@ -21,7 +21,7 @@ const Form = () => {
 
   //Send form data to server for pdf generation
   const onSubmit = async (e) => {
-    e.preventDefault();
+    
     setDownloading(true);
     //Create formData object to be sent to server
     const formData = {
@@ -193,7 +193,7 @@ const Form = () => {
         </div>
 
         <div className = 'col-lg-3' id = 'form-side-menu' style = {sideMenuStyle}>
-          <btn className = 'btn btn-primary form-control' style = {downloadStyle}>Download</btn>
+          <btn className = 'btn btn-primary form-control' style = {downloadStyle} onClick = {(e) => onSubmit()}>Download</btn>
         </div>
         </div>
         
