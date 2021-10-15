@@ -68,8 +68,8 @@ body {
 }
 
 #form-side-bar {
-  height: 100vh;
-  position: sticky;
+  height: 500px;
+  position: sticky !important;
 }
 
 .input {
