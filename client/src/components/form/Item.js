@@ -99,6 +99,8 @@ const descriptionStyle = {
 };
 
 const btnStyle = {
+  backgroundColor:'rgb(108, 99, 255) ',
+  border:'none'
 }
 
 export default Item;

@@ -57,7 +57,8 @@ const TaxModal = (props) => {
         <Button
           type="submit"
           className="form-control w-90"
-          style={{ height: "50px" }}
+          style={{ height: "50px", backgroundColor:'rgb(108, 99, 255) ',
+          border:'none' }}
           onClick={() => addTaxHandler(activeTaxID, taxAmount)}
         >
           <strong>Add tax</strong>

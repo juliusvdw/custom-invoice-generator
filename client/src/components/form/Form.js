@@ -244,12 +244,16 @@ const downloadBtnStyle = {
   display:'flex',
   justifyContent:'center',
   alignItems:'center',
+  backgroundColor:'rgb(108, 99, 255) ',
+  border:'none'
   
 }
 
 
 const btnStyle = {
-  padding: '10px 20px 10px 20px'
+  padding: '10px 20px 10px 20px',
+  backgroundColor:'rgb(108, 99, 255) ',
+  border:'none'
 }
 export default Form;
 
