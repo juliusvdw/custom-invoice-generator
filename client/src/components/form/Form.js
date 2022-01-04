@@ -130,12 +130,13 @@ const Form = () => {
 
           <Item />
 
-          <div
-            className="btn btn-outline-primary form-control mt-3 w-90"
-            onClick={() => addItem()}
-          >
+          <div className = 'btn-container text-left w-100'>
+          <div className="btn btn-primary  mt-3 " onClick={() => addItem()} style = {btnStyle} >
             Add New Item
           </div>
+          </div>
+
+          
 
           <hr style={{ marginTop: "35px" }} />
 
@@ -246,6 +247,9 @@ const downloadStyle = {
   
 }
 
+const btnStyle = {
+  padding: '10px 20px 10px 20px'
+}
 export default Form;
 
 

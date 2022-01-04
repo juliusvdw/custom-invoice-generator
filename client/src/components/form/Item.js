@@ -60,7 +60,8 @@ const Item = () => {
             </h6>
             {item.tax === null ? (
               <div
-                className="btn btn-outline-primary  mt-2 form-control"
+                className="btn btn-primary form-control  mt-2 "
+                style = {btnStyle}
                 onClick={() => handleTaxModal(item)}
               >
                 Add Tax
@@ -96,5 +97,8 @@ const descriptionStyle = {
   minHeight: "40px",
   borderRadius: "7px",
 };
+
+const btnStyle = {
+}
 
 export default Item;
