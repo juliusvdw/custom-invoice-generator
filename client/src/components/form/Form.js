@@ -194,7 +194,7 @@ const Form = () => {
         </div>
 
         <div className = 'col-lg-3' id = 'form-side-menu' style = {sideMenuStyle}>
-          <btn className = 'btn btn-primary form-control' style = {downloadStyle} onClick = {(e) => onSubmit()}>Download</btn>
+          <btn className = 'btn btn-primary form-control' style = {downloadBtnStyle} onClick = {(e) => onSubmit()}>Download</btn>
         </div>
         </div>
         
@@ -239,13 +239,14 @@ const sideMenuStyle = {
   marginTop:'3%'
 }
 
-const downloadStyle = {
+const downloadBtnStyle = {
   height:'45px',
   display:'flex',
   justifyContent:'center',
   alignItems:'center',
   
 }
+
 
 const btnStyle = {
   padding: '10px 20px 10px 20px'

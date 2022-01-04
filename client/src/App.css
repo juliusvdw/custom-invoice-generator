@@ -8,7 +8,6 @@ body {
 
 #home {
   background-image: url("/public/files.svg");
-
   background-position: center; /* Center the image */
 }
 
@@ -46,13 +45,11 @@ body {
 
 
 .btn-custom {
-  background-color: #3cc47c !important;
   border-radius:4px !important;
   border: none !important;
   font-weight: bold;
 }
 .btn-custom-small {
-  background-color: #3cc47c !important;
   border-radius:4px !important;
   border: none !important;
   font-size:16px;

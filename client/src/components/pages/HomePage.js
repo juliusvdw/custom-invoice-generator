@@ -95,7 +95,6 @@ const btnStyle = {
   borderWidth: "1.5px",
   minHeight: "50px",
   width: "200px",
-  backgroundColor:'#2F2FA1 !important'
 };
 
 const containerStyle = {
