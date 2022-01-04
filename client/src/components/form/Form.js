@@ -194,7 +194,9 @@ const Form = () => {
         </div>
 
         <div className = 'col-lg-3' id = 'form-side-menu' style = {sideMenuStyle}>
-          <btn className = 'btn btn-primary form-control' style = {downloadBtnStyle} onClick = {(e) => onSubmit()}>Download</btn>
+          <btn className = 'btn btn-primary form-control' style = {downloadBtnStyle} onClick = {(e) => onSubmit()}>{downloading ? <div class="spinner-border spinner-border-sm" role="status">
+            <span class="sr-only">Loading...</span>
+          </div> : <>Download</> }</btn>
         </div>
         </div>
         
