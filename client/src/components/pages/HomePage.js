@@ -10,21 +10,21 @@ const HomePage = () => {
     <>
       <Navbar />
       <div id="home">
-        <div className="container " style={{ height: "90vh" }}>
-          <div className=" text-center " id="main-left">
-            <div className="container-fluid h-100" style={containerStyle}>
+        <div className="container p-0" style={{ height: "90vh" }}>
+          <div className="  " id="main-left">
+            <div className="" style={containerStyle}>
               <h1 className="heading" style={headingStyle}>
                 Create Elegant Invoices Within Minutes              </h1>
-              <p style={pStyle} className="mt-3 mx-auto">
+              <p style={pStyle} className="mt-3 ">
                 Select one of our templates and create a proffesional invoice within
                 a matter of minutes. Quick, easy and free.
               </p>
               <Link to="templates-section" smooth={true} duration={800}>
                 <btn
-                  className="btn btn-primary  btn-lg mt-4  btn-custom"
+                  className="btn btn-primary  btn-lg mt-3  btn-custom"
                   style={btnStyle}
                 >
-                  <strong>Create A Free Invoice</strong>
+                  <strong>Create  Invoice</strong>
                 </btn>
               </Link>
             </div>
@@ -81,27 +81,27 @@ const imageStyle = {
 };
 
 const headingStyle = {
-  fontSize: '74px',
+  fontSize: '54px',
   fontWeight:'bold'
 };
 
 const pStyle = {
   fontSize: "20px",
-  width: "80%",
-  textAlign: "center",
+  width:'90%',
   color:'#394550'
 };
 
 const btnStyle = {
   borderWidth: "1.5px",
   minHeight: "50px",
-  width: "300px",
+  width: "200px",
   backgroundColor:'#2F2FA1 !important'
 };
 
 const containerStyle = {
-  paddingTop: "5vh",
-  maxWidth: "900px",
+  paddingTop: "190px",
+  width:'600px',
+  textAlign:'left'
 };
 
 const formHeadingStyle = {
@@ -110,7 +110,7 @@ const formHeadingStyle = {
 
 const templatesContainerStyle = {
   height: "790px",
-  paddingTop: "50px",
+  paddingTop:'50px'
 };
 
 const imageContainerStyle = {
@@ -119,9 +119,10 @@ const imageContainerStyle = {
 
 const heroImageStyle = {
   position :'absolute',
-  marginLeft:'-370px',
-  marginTop:'-60px',
-  zIndex:'-9'
+  right:'50px',
+  top:'150px',
+  width:'550px',
+  height:'550px'
 }
 
 const formSectionStyle = {
