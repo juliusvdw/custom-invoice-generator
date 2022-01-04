@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav
       className="navbar navbar-expand-lg"
       style={{
-        
+        paddingLeft:'150px',
       }}
     >
       <p className="navbar-brand " href="#" style={logoStyle}>
@@ -58,7 +58,6 @@ const navItemStyle = {
 }
 
 const logoStyle = {
-  paddingLeft: "5%",
   fontSize: "2rem",
 };
 
