@@ -72,7 +72,7 @@ const Item = () => {
           </div>
           <div className="col-lg-1 col-md-1 my-auto text-left">
             <i
-              className="fas fa-trash pl-2 pr-2 pt-1 text-danger delete"
+              className="fa fa-times pl-2 pr-2 pt-1 text-danger delete"
               onClick={() => removeItem(item.id)}
             ></i>
           </div>
