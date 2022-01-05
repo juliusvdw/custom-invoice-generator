@@ -40,7 +40,7 @@ const Navbar = () => {
       </li>
     </ul>
 
-   <ScrollLink to = 'templates-section' smooth={true} duration={800}><btn className = 'btn btn-lg btn-primary btn-custom-small mr-4'>Create Invoice</btn></ScrollLink>
+   <ScrollLink to = 'templates-section' smooth={true} duration={800}><btn className = 'btn btn-lg btn-primary btn-custom-small mr-4 d-none d-lg-block'>Create Invoice</btn></ScrollLink>
     
   </div>
 </nav>

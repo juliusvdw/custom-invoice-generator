@@ -9,15 +9,15 @@ const TemplateSection = () => {
         className="templates-container width-100 "
       >
         <div className="row">
-          <div className = 'col-lg-4 col-md-4'>
+          <div className = 'col-lg-4 col-md-4 col-sm-4'>
           <Template src={"invoicetest.png"} id={"invoice1"} />
 
           </div>
-          <div className = 'col-lg-4 col-md-4'>
+          <div className = 'col-lg-4 col-md-4 col-sm-4'>
           <Template src={"invoicetest2.png"} id={"invoice2"} />
 
           </div>
-          <div className = 'col-lg-4 col-md-4'>
+          <div className = 'col-lg-4 col-md-4 col-sm-4'>
           <Template src={"invoicetest3.png"} id={"invoice1"} />
 
           </div>

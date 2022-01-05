@@ -19,9 +19,9 @@ const HomePage = () => {
                 Select one of our templates and create a proffesional invoice within
                 a matter of minutes. Quick, easy and free.
               </p>
-              <Link to="templates-section" smooth={true} duration={800}>
+              <Link to="templates-section" smooth={true} duration={800} >
                 <btn
-                  className="btn btn-primary  btn-lg mt-3  btn-custom"
+                  className="btn btn-primary  btn-lg mt-3  btn-custom "
                   style={btnStyle}
                 >
                   <strong>Create  Invoice</strong>
@@ -93,7 +93,9 @@ const btnStyle = {
 const containerStyle = {
   paddingTop: "190px",
   width:'600px',
-  textAlign:'left'
+  textAlign:'left',
+  position:'relative',
+  zIndex:'999'
 };
 
 const templatesContainerStyle = {
