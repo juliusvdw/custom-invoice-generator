@@ -12,7 +12,7 @@ const HomePage = () => {
       <div id="home">
         <div className="container p-0 home-container"style={{ height: "90vh" }}>
           <div className="  " id="main-left">
-            <div className="" style={containerStyle}>
+            <div className="home-text-container" style={containerStyle}>
               <h1 className="heading" style={headingStyle}>
                 Create Elegant Invoices Within Minutes              </h1>
               <p style={pStyle} className="mt-3 ">
@@ -99,7 +99,7 @@ const containerStyle = {
 };
 
 const templatesContainerStyle = {
-  maxHeight: "790px",
+  // maxHeight: "790px",
   paddingTop:'100px',
   paddingBottom:'100px'
 };

@@ -80,14 +80,14 @@ const Form = () => {
                 onChange={(e) => setFrom(e.target.value)}
               />
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-3 offset-lg-1">
+            <div className="col-lg-3 col-md-3 col-sm-3 offset-lg-1 d-none d-md-block">
               <div className="jumbotron  mt-4 py-0 px-0" style={logoStyle}>
                 <h6 style={{ paddingTop: "35px" }}>Your Logo Here</h6>
               </div>
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-8 col-md-8 col-sm-8 text-left">
+            <div className="col-lg-8 col-md-8 col-sm-8 text-left mt-3">
               <div className="d-flex">
                 <i className="fas fa-file-invoice pl-2 pr-2 pt-1"></i>
                 <h6>
@@ -102,7 +102,7 @@ const Form = () => {
                 onChange={(e) => setTo(e.target.value)}
               />
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-3 offset-lg-1 text-left">
+            <div className="col-lg-3 col-md-3 col-sm-3 offset-lg-1 text-left mt-3">
               <h6>
                 <strong>Invoice # </strong>
               </h6>
@@ -141,7 +141,7 @@ const Form = () => {
           <hr style={{ marginTop: "35px" }} />
 
           <div className="row mt-4">
-            <div className="col-lg-6 offset-lg-5 text-left ">
+            <div className="col-lg-6 offset-lg-5 text-left mt-3">
               <div className="d-flex">
                 <h5>
                   <strong>Subtotal</strong>
@@ -174,7 +174,7 @@ const Form = () => {
           </div>
 
           <div className="row mt-4">
-            <div className="col-lg-8 col-md-8 col-sm-8 text-left">
+            <div className="col-lg-8 col-md-8 col-sm-8 text-left mt-3">
               <div className="d-flex">
                 <i className="fas fa-copy pl-2 pr-2 pt-1"></i>
                 <h6>
@@ -193,7 +193,7 @@ const Form = () => {
         </div>
         </div>
 
-        <div className = 'col-lg-3' id = 'form-side-menu' style = {sideMenuStyle}>
+        <div className = 'col-lg-3 ' id = 'form-side-menu' style = {sideMenuStyle}>
           <btn className = 'btn btn-primary form-control' style = {downloadBtnStyle} onClick = {(e) => onSubmit()}>{downloading ? <div class="spinner-border spinner-border-sm" role="status">
             <span class="sr-only">Loading...</span>
           </div> : <>Download</> }</btn>

@@ -31,7 +31,7 @@ const Template = ({ src, id }) => {
 };
 
 const imageStyle = {
-  maxWidth: "350px",
+  maxWidth: "300px",
   maxHeight: "500px",
   border: "1px solid rgb(210,210,210)",
   borderRadius: "5px",
