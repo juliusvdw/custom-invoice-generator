@@ -4,24 +4,32 @@ import Template from "./Template";
 const TemplateSection = () => {
   return (
     <>
-      <h2>Choose a template</h2>
+      <h2 style = {headingStyle}>Choose a template</h2>
       <div
         className="templates-container width-100 "
-        style={templatesContainerStyle}
       >
         <div className="row">
+          <div className = 'col-lg-4 col-md-4'>
           <Template src={"invoicetest.png"} id={"invoice1"} />
+
+          </div>
+          <div className = 'col-lg-4 col-md-4'>
           <Template src={"invoicetest2.png"} id={"invoice2"} />
-          <Template src={"invoicetest3.png"} id={"invoice3"} />
+
+          </div>
+          <div className = 'col-lg-4 col-md-4'>
+          <Template src={"invoicetest3.png"} id={"invoice1"} />
+
+          </div>
         </div>
       </div>
     </>
   );
 };
 
-const templatesContainerStyle = {
-  paddingTop: "40px",
-};
+const headingStyle = {
+  marginBottom:'50px'
+}
 const imageStyle = {
   width: "350px",
   height: "500px",

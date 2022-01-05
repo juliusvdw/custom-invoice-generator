@@ -30,10 +30,8 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className = '' style = {imageContainerStyle}>
-        <img src = '/invoice.svg' style = {heroImageStyle}/>
+        <img src = '/invoice.svg' className = 'img-fluid hero-image' style = {heroImageStyle}/>
 
-      </div>
 
         </div>
 
@@ -53,16 +51,11 @@ const HomePage = () => {
 
       <div className="container-fluid" id="form-section" style = {formSectionStyle}>
         
-
         <div className = 'row'>
 
-        
-
-        <div className="col-lg-12 offset-md-1 " style = {formColStyle}>
+        <div className="col-lg-12  " style = {formColStyle}>
           <Form />
-        </div>
-
-        
+        </div> 
 
         </div>
       </div>
@@ -103,13 +96,10 @@ const containerStyle = {
   textAlign:'left'
 };
 
-const formHeadingStyle = {
-  paddingTop: "50px",
-};
-
 const templatesContainerStyle = {
-  height: "790px",
-  paddingTop:'50px'
+  maxHeight: "790px",
+  paddingTop:'100px',
+  paddingBottom:'100px'
 };
 
 const imageContainerStyle = {
@@ -120,12 +110,13 @@ const heroImageStyle = {
   position :'absolute',
   right:'50px',
   top:'150px',
-  width:'550px',
-  height:'550px'
+  maxWidth:'550px',
+  maxHeight:'550px'
 }
 
 const formSectionStyle = {
-  backgroundColor:'#ffffff'
+  backgroundColor:'#ffffff',
+  paddingTop:'100px'
 }
 
 

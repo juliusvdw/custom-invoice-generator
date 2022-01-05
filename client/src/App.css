@@ -71,5 +71,31 @@ body {
   position: sticky !important;
 }
 
-.input {
+/* Tablet responsive styling */
+
+@media only screen and (min-width: 500px) and (max-width: 1024px) {
+  .navbar {
+    padding-left: 30px !important;
+  }
+  .hero-image {
+    display:none
+  }
+ }
+
+/* Mobile styling */
+@media (max-width: 460px) {
+
+  .navbar {
+    padding-left: 30px !important;
+  }
+  .hero-image {
+    display:none
+  }
+
+  .template-image-container {
+    height:250px;
+    width: 250px;
+  }
+
+  
 }

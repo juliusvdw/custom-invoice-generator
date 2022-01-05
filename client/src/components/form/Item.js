@@ -26,7 +26,7 @@ const Item = () => {
     return (
       <>
         <div className="row mt-4">
-          <div className="col-lg-6 text-left">
+          <div className="col-lg-6 col-md-6 text-left">
             <div className="d-flex">
               <i className="fas fa-pen pl-2 pr-2 pt-1"></i>
               <h6>
@@ -41,7 +41,7 @@ const Item = () => {
               onChange={(e) => modifyItem(item.id, e)}
             />
           </div>
-          <div className="col-lg-2 text-left">
+          <div className="col-lg-2 col-md-2 text-left">
             <h6>
               <strong>Amount</strong>
             </h6>
@@ -54,7 +54,7 @@ const Item = () => {
               onChange={(e) => modifyItem(item.id, e)}
             />
           </div>
-          <div className="col-lg-3 text-left">
+          <div className="col-lg-3 col-md-3 text-left">
             <h6>
               <strong>Tax</strong>
             </h6>
@@ -70,7 +70,7 @@ const Item = () => {
               <h4 className="mt-3 text-danger">{item.tax}%</h4>
             )}
           </div>
-          <div className="col-lg-1 my-auto text-left">
+          <div className="col-lg-1 col-md-1 my-auto text-left">
             <i
               className="fas fa-trash pl-2 pr-2 pt-1 text-danger delete"
               onClick={() => removeItem(item.id)}

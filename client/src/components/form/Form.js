@@ -59,7 +59,7 @@ const Form = () => {
       <form>
 
         <div className = 'row '>
-        <div className = 'col-lg-8'>
+        <div className = 'col-lg-8 offset-lg-1'>
 
         
         <div className="jumbotron " style={jumboStyle}>
@@ -208,7 +208,7 @@ const Form = () => {
 //Create style Variables
 
 const jumboStyle = {
-  minHeight: "60vh",
+  // minHeight: "60vh",
   marginTop: "3%",
   backgroundColor: "rgb(250,250,250)",
   padding: "25px",

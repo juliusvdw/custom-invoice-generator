@@ -15,7 +15,6 @@ const Template = ({ src, id }) => {
 
   return (
     <Link to="form-section" smooth={true} duration={800}>
-      <div className="col-lg-4" onClick={() => handleSelect(id)}>
         <div
           className="template-image-container"
           style={selectedTemplate === id ? selectedImageStyle : imageStyle}
@@ -27,21 +26,20 @@ const Template = ({ src, id }) => {
             style={{ maxHeight: "100%" }}
           ></img>
         </div>
-      </div>
     </Link>
   );
 };
 
 const imageStyle = {
-  width: "350px",
-  height: "500px",
+  maxWidth: "350px",
+  maxHeight: "500px",
   border: "1px solid rgb(210,210,210)",
   borderRadius: "5px",
 };
 
 const selectedImageStyle = {
-  width: "350px",
-  height: "500px",
+  maxWidth: "350px",
+  maxHeight: "500px",
   border: "1px solid #0275d8",
   borderRadius: "5px",
 };
