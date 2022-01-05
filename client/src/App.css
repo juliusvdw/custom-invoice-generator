@@ -74,6 +74,10 @@ body {
 /* Tablet responsive styling */
 
 @media only screen and (min-width: 500px) and (max-width: 1024px) {
+
+  .home-container {
+    height: 60vh !important;
+  }
   .navbar {
     padding-left: 30px !important;
   }

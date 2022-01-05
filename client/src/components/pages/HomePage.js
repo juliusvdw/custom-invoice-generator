@@ -10,7 +10,7 @@ const HomePage = () => {
     <>
       <Navbar />
       <div id="home">
-        <div className="container p-0" style={{ height: "90vh" }}>
+        <div className="container p-0 home-container"style={{ height: "90vh" }}>
           <div className="  " id="main-left">
             <div className="" style={containerStyle}>
               <h1 className="heading" style={headingStyle}>
