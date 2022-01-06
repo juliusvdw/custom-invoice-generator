@@ -118,7 +118,7 @@ const heroImageStyle = {
 
 const formSectionStyle = {
   backgroundColor:'#ffffff',
-  paddingTop:'100px'
+  paddingTop:'50px'
 }
 
 

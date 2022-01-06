@@ -23,7 +23,7 @@ const Template = ({ src, id }) => {
           <img
             className="img-fluid"
             src={src}
-            style={{ maxHeight: "100%" }}
+            style={{ height: "100%" }}
           ></img>
         </div>
     </Link>
@@ -32,16 +32,18 @@ const Template = ({ src, id }) => {
 
 const imageStyle = {
   maxWidth: "300px",
-  maxHeight: "500px",
+  maxHeight: "420px",
   border: "1px solid rgb(210,210,210)",
   borderRadius: "5px",
+  overflow:'hidden'
 };
 
 const selectedImageStyle = {
   maxWidth: "350px",
-  maxHeight: "500px",
+  maxHeight: "420px",
   border: "1px solid #0275d8",
   borderRadius: "5px",
+  overflow:'hidden'
 };
 
 export default Template;

@@ -58,7 +58,7 @@ const Item = () => {
               onChange={(e) => modifyItem(item.id, e)}
             />
           </div>
-          <div className="col-lg-3 col-md-3 text-left mt-3">
+          <div className="col-lg-3 col-md-3 text-left mt-1">
             <h6>
               <strong>Tax</strong>
             </h6>
