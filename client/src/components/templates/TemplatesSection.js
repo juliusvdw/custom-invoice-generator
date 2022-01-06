@@ -18,7 +18,7 @@ const TemplateSection = () => {
 
           </div>
           <div className = 'col-lg-4 col-md-4 col-sm-4'>
-          <Template src={"invoicetest3.png"} id={"invoice1"} />
+          <Template src={"invoicetest3.png"} id={"invoice3"} />
 
           </div>
         </div>

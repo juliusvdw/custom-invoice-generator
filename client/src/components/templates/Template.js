@@ -17,6 +17,7 @@ const Template = ({ src, id }) => {
     <Link to="form-section" smooth={true} duration={800}>
         <div
           className="template-image-container"
+          onClick = {() => handleSelect(id)}
           style={selectedTemplate === id ? selectedImageStyle : imageStyle}
         >
           {" "}
@@ -39,7 +40,7 @@ const imageStyle = {
 };
 
 const selectedImageStyle = {
-  maxWidth: "350px",
+  maxWidth: "300px",
   maxHeight: "420px",
   border: "1px solid #0275d8",
   borderRadius: "5px",
