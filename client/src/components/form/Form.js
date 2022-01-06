@@ -19,10 +19,16 @@ const Form = () => {
 
   const { sendData, addItem, items } = formContext;
 
+  //Store errors data
+  let errors = false;
+
   //Send form data to server for pdf generation
-  const onSubmit = async (e) => {
-    
-    setDownloading(true);
+  const onSubmit = async (e) => {    
+
+    validateForm()
+
+    if(!errors){
+      setDownloading(true);
     //Create formData object to be sent to server
     const formData = {
       from,
@@ -37,9 +43,36 @@ const Form = () => {
     };
     console.log(formData);
     await sendData(formData);
-
+    } 
     setDownloading(false);
   };
+
+  //Validate form 
+  const validateForm = () => {
+     //Select required fields 
+     const fromInput = document.querySelector('#from-input')
+     const toInput = document.querySelector('#to-input')
+     const invoiceNumber = document.querySelector('#invoice-number')
+     const invoiceDate = document.querySelector('#invoice-date')
+ 
+     const requiredFields = [fromInput,toInput,invoiceNumber,invoiceDate]
+ 
+     requiredFields.forEach(input => {
+       if(input.value == ''){
+         input.style.borderColor = 'red';
+         errors = true;
+       } 
+
+
+       setTimeout(() => {
+        requiredFields.forEach((input) => {
+          input.style.borderColor = '#ced4da'
+        })
+       },3000)
+     })
+
+     
+  }
 
   //Modify output for subtotal amount
   let subTotal = 0;
@@ -73,6 +106,7 @@ const Form = () => {
               </div>
 
               <textarea
+                id = 'from-input'
                 className="form-control mt-2"
                 placeholder="Your Company/Name + Address"
                 style={textAreaStyle}
@@ -95,6 +129,7 @@ const Form = () => {
                 </h6>
               </div>
               <textarea
+              id = 'to-input'
                 className="form-control mt-2"
                 placeholder="Your customer's billing address"
                 style={textAreaStyle}
@@ -107,6 +142,7 @@ const Form = () => {
                 <strong>Invoice # </strong>
               </h6>
               <input
+              id = 'invoice-number'
                 type="text"
                 placeholder="1"
                 className="form-control"
@@ -119,6 +155,7 @@ const Form = () => {
                 <strong>Invoice Date </strong>
               </h6>
               <input
+                id = 'invoice-date'
                 type="date"
                 className="form-control"
                 style={borderStyle}
