@@ -4,6 +4,7 @@
 
 body {
   background-color: #ffffff;
+  padding-bottom:50px
 }
 
 #home {
@@ -44,12 +45,16 @@ body {
 }
 
 
+.btn:hover {
+  opacity:0.8 !important
+}
 .btn-custom {
   border-radius:4px !important;
   border: none !important;
   font-weight: bold;
   background-color: rgb(108, 99, 255) !important;
 }
+
 .btn-custom-small {
   border-radius:4px !important;
   border: none !important;
