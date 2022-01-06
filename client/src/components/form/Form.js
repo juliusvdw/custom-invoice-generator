@@ -80,7 +80,7 @@ const Form = () => {
                 onChange={(e) => setFrom(e.target.value)}
               />
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-3 offset-lg-1 d-none d-md-block">
+            <div className="col-lg-3 col-md-3 col-sm-3 offset-lg-1 d-none ">
               <div className="jumbotron  mt-4 py-0 px-0" style={logoStyle}>
                 <h6 style={{ paddingTop: "35px" }}>Your Logo Here</h6>
               </div>
